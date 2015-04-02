@@ -1,4 +1,4 @@
-# Using docker-machine to create machines to try out latest versions of Docker
+# Using docker-machine to try out the latest versions of Docker
 
 This is part of the [P@ Docker Tips](/README.md) series or tips about Docker.
 
