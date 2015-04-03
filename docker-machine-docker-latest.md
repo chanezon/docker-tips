@@ -20,7 +20,10 @@ docker-machine version 0.2.0 (HEAD)
 
 Then create a docker-machine with boot2docker 1.6.0-rc4 image,and ssh to it.
 ```
-docker-machine -D create -d virtualbox --virtualbox-boot2docker-url https://s3-us-west-1.amazonaws.com/b2diso/rc4.iso 
+docker-machine -D create \
+-d virtualbox \
+--virtualbox-boot2docker-url https://s3-us-west-1.amazonaws.com/b2diso/rc4.iso \
+rc4
 docker-machine ssh rc4
 docker -v
 Docker version 1.6.0-rc4...
