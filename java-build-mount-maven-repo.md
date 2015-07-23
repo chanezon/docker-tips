@@ -6,7 +6,7 @@ Today's tip features is from me: during lunch I attended a very cool demo by one
 
 ## The problem
 
-If you are building Java code in a Docker image using Maven, or Scala code using sbt, maven will look for all your code's dependencies in it's local cache $HOME/.m2 ($HOME/.sbt for Scala). If they are not there, it will fetch all dependencies from online Maven repositories. Since your Java code is built in the container, $HOME means the home directory of the user doing the build **in the container**. Except if you have pre-seeded a layer with a Maven cache, there is nothing in there, and Maven will fetch for all dependencies everytime. This problem and potential solutions are explained in [http://blog.flurdy.com/2014/11/dont-download-internet-share-maven-ivy-docker.html][Don't download the internet. Share Maven and Ivy repositories with Docker containers].
+If you are building Java code in a Docker image using Maven, or Scala code using sbt, maven will look for all your code's dependencies in it's local cache $HOME/.m2 ($HOME/.sbt for Scala). If they are not there, it will fetch all dependencies from online Maven repositories. Since your Java code is built in the container, $HOME means the home directory of the user doing the build **in the container**. Except if you have pre-seeded a layer with a Maven cache, there is nothing in there, and Maven will fetch for all dependencies everytime. This problem and potential solutions are explained in [Don't download the internet. Share Maven and Ivy repositories with Docker containers](http://blog.flurdy.com/2014/11/dont-download-internet-share-maven-ivy-docker.html).
 
 ## The solution: mount a Volume for $HOME/.m2
 
