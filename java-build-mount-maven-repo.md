@@ -1,4 +1,4 @@
-# When compiling Java code using Maven in a container, avoid downloading the internet and mount maven cache as a Volume
+# Using a Volume for Maven cache when compiling Java in a container
 
 This is part of the [P@ Docker Tips](/README.md) series or tips about Docker.
 
