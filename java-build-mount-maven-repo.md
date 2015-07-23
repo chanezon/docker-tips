@@ -16,7 +16,7 @@ The solution is quite easy: you need to mount a Volume for $HOME/.m2 ($HOME/.sbt
 
 In order to compile your code with the [official Maven container](https://registry.hub.docker.com/_/maven/), cd to your source directory and run:
 ```
-docker run -v ~/.m2:/root/.m2 -v "$PWD":/usr/src -w /usr/src maven:3-jdk-8 mvn install
+docker run -v ~/.m2:/root/.m2 -v "$PWD":/usr/src -w /usr/src maven:3-jdk-8 mvn package
 ```
 
 The compilation artifacts will be in $PWD/target (on Mac OS X, docker-machine mounts /Users/yourusername in the Virtualbox VM).
