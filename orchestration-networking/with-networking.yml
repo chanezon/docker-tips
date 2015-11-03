@@ -1,0 +1,13 @@
+web:
+  image: chanezon/spring-doge
+  ports:
+   - "8080:8080"
+  environment:
+   - MONGODB_URI=mongodb://db:27017/test
+   - "affinity:com.docker.compose.service!=db"
+mongo:
+  image: mongo
+  container_name: "db"
+  environment:
+    - "label:storage=ssd"
+    
