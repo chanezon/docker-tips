@@ -1,13 +1,9 @@
 #!/bin/bash
 
-set -e
-#BOOT2DOCKER_URL=file:///Users/pat/Downloads/boot2docker-v1.9.0-rc4.iso
-BOOT2DOCKER_URL=https://github.com/tianon/boot2docker-legacy/releases/download/v1.9.0-rc5/boot2docker.iso
-SWARM_IMAGE=swarm:1.0.0-rc3
+SWARM_IMAGE=swarm:1.0.0
 # Docker Machine Setup
 docker-machine create \
 	-d virtualbox \
-	--virtualbox-boot2docker-url $BOOT2DOCKER_URL \
 	swl-consul
 
 docker $(docker-machine config swl-consul) run -d --restart=always \
@@ -17,7 +13,6 @@ docker $(docker-machine config swl-consul) run -d --restart=always \
 	
 docker-machine create \
 	-d virtualbox \
-	--virtualbox-boot2docker-url $BOOT2DOCKER_URL \
 	--swarm \
 	--swarm-image="$SWARM_IMAGE" \
 	--swarm-master \
@@ -28,7 +23,6 @@ docker-machine create \
 
 docker-machine create \
 	-d virtualbox \
- 	--virtualbox-boot2docker-url $BOOT2DOCKER_URL \
 	--swarm \
 	--swarm-image="$SWARM_IMAGE" \
 	--swarm-discovery="consul://$(docker-machine ip swl-consul):8500" \
