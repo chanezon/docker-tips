@@ -4,7 +4,7 @@ This demo uses the latest networking features introduced in Docker 1.9 and shows
 
 I have shown it at JavaOne 2015, [video of the demo](https://www.youtube.com/watch?v=S9XP8S85XaI&t=6h10m03s), [slides](http://www.slideshare.net/chanezon/docker-orchestration-welcome-to-the-jungle-javaone-2015)
 
-You need Docker 1.10, and corresponding latest versions of compose and machine, which you can install with [docker-toolbox 1.9.0](https://github.com/docker/toolbox/releases)
+You need Docker 1.10, and corresponding latest versions of compose and machine, which you can install with [docker-toolbox 1.10.0](https://github.com/docker/toolbox/releases)
 As of today you need:
 * docker 1.10 and above
 * docker-machine 0.6.0 and above
