@@ -14,7 +14,8 @@ To run it:
 ```
 ./swarm-local.sh
 eval $(docker-machine env --swarm swl-demo0)
-docker-compose --x-networking --x-network-driver=overlay -f with-networking.yml up
+docker-compose -f with-networking.yml up -d
+docker-compose -f with-networking.yml scale web=3
 ```
 Then in another terminal:
 ```
@@ -34,3 +35,26 @@ This example shows:
 * using docker-machine to provision a swarm cluster, using the previous consul instance for swarm discovery and networking config store.
 * using docker machine ```--engine-label``` option to apply labels to some of our swarm cluster engines, that we can use for scheduling constraints.
 * using docker-compose swarm and networking integrations to schedule a Spring Boot app using Mongodb on a Swarm cluster.
+
+New: using rexray for crossw cluster portable volumes.
+```
+eval $(docker-machine env --swarm swl-demo0)
+docker-compose --x-networking --x-network-driver=overlay -f with-networking-and-volumes.yml up
+```
+
+# Orchestration
+
+query label "com.docker.compose.service": "web",
+"Networks": {
+           "orchestrationnetworking": {
+               "EndpointID": "94b9796ea65bd0191ceda076bd0d6ecdacdb54950a320f9bda404045c52cc556",
+               "Gateway": "",
+               "IPAddress": "10.0.2.6",
+listen to events for stop, add
+inspect
+update haprocy
+add yelp, deis
+add yodocker
+
+https://github.com/skippbox/k8sonpi
+
