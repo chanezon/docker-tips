@@ -1,6 +1,7 @@
 # Azure Resource Manager Template to provision a Docker Universal Control Plane cluster
 
-This template is evolved from Microsoft's Azure Container Service base template to provision Swarm cluster. I modified it to provision a Docker Universal Control Plane cluster.
+This template is evolved from Microsoft's Azure Container Service base template to provision Swarm cluster. More specifically https://github.com/anhowe/scratch/blob/master/mesos-marathon-vmss/swarm-cluster-with-no-jumpbox.json.
+I modified it to provision a Docker Universal Control Plane cluster.
 
 Steps:
 * Install azure cli
@@ -20,6 +21,8 @@ azure group deployment create "patucp1" "patucp1dep"  -f azuredeploy.json -e azu
 15 minutes later you should have a working UCP cluster with 3 masters and 1 node. Nodes are in a VM Scale Set so you should be able to add a rule to autoscale that (I still need to test that).
 
 The template outputs the FQDN of the master. In your browser, open it on https port: https://<masterFQDN>. Ignore Chrosme's warning and say you want to proceed anyway. You shoudl end up in UCP login screen. Default credentials are admin/orca. Don't forget to change them as soon as you are logged in.
+
+<img src="/img/ucp.png"/>
 
 Have fun with UCP!
 
