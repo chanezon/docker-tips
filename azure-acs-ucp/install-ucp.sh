@@ -102,7 +102,12 @@ ismaster ()
 {
   if [ "$MASTERPREFIX" == "$VMPREFIX" ]
   then
-    return 0
+    if [ "$VMNUMBER" == '0' ]
+    then
+      return 0
+    else
+      return 1
+    fi
   else
     return 1
   fi
@@ -111,7 +116,41 @@ if ismaster ; then
   echo "this node is a master"
 fi
 
+isreplica ()
+{
+  if [ "$MASTERPREFIX" == "$VMPREFIX" ]
+  then
+    if [ "$VMNUMBER" == '0' ]
+    then
+      return 1
+    else
+      return 0
+    fi
+  else
+    return 1
+  fi
+}
+if isreplica ; then
+  echo "this node is a replica"
+fi
+
 isagent()
+{
+  if ismaster ; then
+    return 1
+  else
+    if isreplica ; then
+        return 1
+    else
+        return 0
+    fi
+  fi
+}
+if isagent ; then
+  echo "this node is an agent"
+fi
+
+isagentorreplica()
 {
   if ismaster ; then
     return 1
@@ -119,9 +158,6 @@ isagent()
     return 0
   fi
 }
-if isagent ; then
-  echo "this node is an agent"
-fi
 
 ######################
 # resolve self in DNS
@@ -186,7 +222,7 @@ VMIPADDR="${BASESUBNET}${MASTEROCTET}"
 MASTER0IPADDR="${BASESUBNET}${MASTERFIRSTADDR}"
 
 if ismaster ; then
-  sudo docker run --rm -it \
+  sudo docker run --rm -i \
     --name ucp \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v /opt/azure/containers/docker_subscription.lic:/docker_subscription.lic \
@@ -195,8 +231,22 @@ if ismaster ; then
   echo "completed starting UCP on the master"
 fi
 
-if isagent ; then
-  echo "todo install ucp on agent"
+if isagentorreplica ; then
+  REPLICAPARAM=""
+  if isreplica ; then
+    REPLICAPARAM="--replica"
+  fi
+  FPRINT=`echo | openssl s_client -connect ${MASTER0IPADDR}:443 |& openssl x509 -fingerprint -noout | cut -f2 -d'='`
+  echo $FPRINT
+  sudo docker run --rm -i \
+    --name ucp \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v /opt/azure/containers/docker_subscription.lic:/docker_subscription.lic \
+    -e UCP_ADMIN_USER=admin \
+    -e UCP_ADMIN_PASSWORD=orca \
+    docker/ucp \
+    join $REPLICAPARAM --san $MASTERFQDN --fresh-install --url https://${MASTER0IPADDR}:443 --fingerprint "${FPRINT}"
+  echo "completed starting UCP on the agent or replica"
 fi
 
 if [ $POSTINSTALLSCRIPTURI != "disabled" ]
