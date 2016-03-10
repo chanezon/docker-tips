@@ -203,7 +203,7 @@
     },
     "ucpInstallScriptContent": {
       "type": "string",
-      "defaultValue": "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",
+      "defaultValue": "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",
       "metadata": {
         "description": "Content of your UCP install script. gzipped then Base64 encoded"
       }
@@ -318,10 +318,6 @@
     "masterLbIPConfigID": "[concat(variables('masterLbID'),'/frontendIPConfigurations/', variables('masterLbIPConfigName'))]",
     "masterLbBackendPoolName": "[concat(variables('orchestratorName'), '-master-pool-', variables('nameSuffix'))]",
     "masterCustomScript": "[concat('/bin/bash -c \"/bin/bash /opt/azure/containers/configure-swarm-cluster.sh ',variables('clusterInstallParameters'),' >> /var/log/azure/cluster-bootstrap.log 2>&1\"')]",
-
-    "agentNSGName": "agent-nsg",
-    "agentNSGName": "[concat(variables('orchestratorName'), '-agent-nsg-', variables('nameSuffix'))]",
-    "agentNSGID": "[resourceId('Microsoft.Network/networkSecurityGroups',variables('agentNSGName'))]",
     "agentFirstAddr": 20,
     "agentVMNamePrefix": "[concat(variables('orchestratorName'), '-agent-', variables('nameSuffix'))]",
     "agentsLbName": "[concat(variables('orchestratorName'), '-agent-lb-', variables('nameSuffix'))]",
@@ -650,7 +646,7 @@
               "sourceAddressPrefix": "*",
               "destinationAddressPrefix": "*",
               "access": "Allow",
-              "priority": 200,
+              "priority": 210,
               "direction": "Inbound"
             }
           }
@@ -934,58 +930,6 @@
     },
     {
       "apiVersion": "2015-06-15",
-      "type": "Microsoft.Network/networkSecurityGroups",
-      "name": "[variables('agentNSGName')]",
-      "location": "[resourceGroup().location]",
-      "properties": {
-        "securityRules": [
-          {
-            "name": "http",
-            "properties": {
-              "description": "Allow HTTP",
-              "protocol": "Tcp",
-              "sourcePortRange": "*",
-              "destinationPortRange": "80",
-              "sourceAddressPrefix": "*",
-              "destinationAddressPrefix": "*",
-              "access": "Allow",
-              "priority": 210,
-              "direction": "Inbound"
-            }
-          },
-          {
-            "name": "https",
-            "properties": {
-              "description": "Allow HTTPS",
-              "protocol": "Tcp",
-              "sourcePortRange": "*",
-              "destinationPortRange": "443",
-              "sourceAddressPrefix": "*",
-              "destinationAddressPrefix": "*",
-              "access": "Allow",
-              "priority": 220,
-              "direction": "Inbound"
-            }
-          },
-          {
-            "name": "Tcp8080",
-            "properties": {
-              "description": "Allow port 8080",
-              "protocol": "Tcp",
-              "sourcePortRange": "*",
-              "destinationPortRange": "8080",
-              "sourceAddressPrefix": "*",
-              "destinationAddressPrefix": "*",
-              "access": "Allow",
-              "priority": 230,
-              "direction": "Inbound"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "apiVersion": "2015-06-15",
       "type": "Microsoft.Compute/virtualMachineScaleSets",
       "name": "[concat(variables('agentVMNamePrefix'), 'vmss-',0)]",
       "location": "[resourceGroup().location]",
@@ -996,8 +940,7 @@
         "[concat('Microsoft.Storage/storageAccounts/', variables('storageAccountPrefixes')[mod(3,variables('storageAccountPrefixesCount'))],variables('storageAccountPrefixes')[div(3,variables('storageAccountPrefixesCount'))],variables('storageAccountBaseName'),4)]",
         "[concat('Microsoft.Storage/storageAccounts/', variables('storageAccountPrefixes')[mod(4,variables('storageAccountPrefixesCount'))],variables('storageAccountPrefixes')[div(4,variables('storageAccountPrefixesCount'))],variables('storageAccountBaseName'),5)]",
         "[variables('agentsLbID')]",
-        "[variables('vnetID')]",
-        "[variables('agentNSGID')]"
+        "[variables('vnetID')]"
       ],
       "sku": {
         "name": "[variables('agentVMSize')]",
@@ -1041,9 +984,6 @@
                 "name": "agentNodeNic",
                 "properties": {
                   "primary": "true",
-                  "networkSecurityGroup": {
-                    "id": "[variables('agentNSGID')]"
-                  },
                   "ipConfigurations": [
                     {
                       "name": "nicipconfig",

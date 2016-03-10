@@ -1,0 +1,30 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "masterEndpointDNSNamePrefix": {
+        "value": "patmst18"
+    },
+    "agentEndpointDNSNamePrefix": {
+        "value": "patagt18"
+    },
+    "agentCount": {
+        "value": 1
+    },
+    "masterCount": {
+        "value": 3
+    },
+    "agentVMSize" : {
+        "value": "Standard_A1"
+    },
+   "sshRSAPublicKey": {
+        "value": "ssh-rsa AAAA..WgGvr foo@bar.com"
+    },
+    "ucpInstallScriptContent": {
+        "value": "if you want to customize the install script, paste the result of cat install-ucp.sh|gzip|base64"
+    },
+    "dockerLicenceData": {
+      "value": "paste the result of cat docker_subscription.lic|gzip|base64"
+    }    
+  }
+}

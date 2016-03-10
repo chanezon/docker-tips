@@ -231,11 +231,23 @@ if ismaster ; then
   echo "completed starting UCP on the master"
 fi
 
+waitForMaster()
+{
+  # ensure that master is ready
+  until $(curl --output /dev/null --silent --head --fail http://${MASTER0IPADDR}:443); do
+    printf '.'
+    sleep 10
+  done
+  #add a bit more time for ucp to be fully functional
+  sleep 180
+}
+
 if isagentorreplica ; then
   REPLICAPARAM=""
   if isreplica ; then
     REPLICAPARAM="--replica"
   fi
+  waitForMaster
   FPRINT=`echo | openssl s_client -connect ${MASTER0IPADDR}:443 |& openssl x509 -fingerprint -noout | cut -f2 -d'='`
   echo $FPRINT
   sudo docker run --rm -i \
