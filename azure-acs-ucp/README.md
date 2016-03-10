@@ -2,6 +2,8 @@
 
 ## Introduction
 
+This is part of the [P@ Docker Tips](/README.md) series or tips about Docker.
+
 For [#SwarmWeek](https://twitter.com/search?q=%23SwarmWeek) here is an [Azure resource Manager](https://azure.microsoft.com/en-us/documentation/articles/resource-group-overview/) template as a basis to provision a cluster running [Docker Universal Control Plane](https://docs.docker.com/ucp/overview/) on Microsoft Azure. 
 
 This template is evolved from Microsoft's [Azure Container Service](https://azure.microsoft.com/en-us/documentation/services/container-service/) base template to provision Swarm cluster. ACS comes in 2 flavors, Mesos and Swarm. I took the [Swarm template]((https://github.com/Azure/azure-quickstart-templates/tree/master/101-acs-swarm)) as a base. More specifically the [ACS Swarm template](https://github.com/Azure/azure-quickstart-templates/blob/master/101-acs-swarm/azuredeploy.json) takes a series of high level parameters like number of masters and agents and provisions a `"Microsoft.ContainerService/containerServices"` service with it. This service is actually implemented behind the scenes by a more complex template who actually provisions the infrastructure, and is similar to [anhowe's swarm-cluster-with-no-jumpbox.json](https://github.com/anhowe/scratch/blob/master/mesos-marathon-vmss/swarm-cluster-with-no-jumpbox.json). This is the template I used as a base, trying to minimize modifications to be able to rebase when the master template changes.

@@ -2,6 +2,8 @@
 
 This is part of the [P@ Docker Tips](/README.md) series or tips about Docker.
 
+Since then Alexei Ledenev published a better tip for using maven with Docker: [Docker Pattern: The Build Container](https://medium.com/@alexeiled/docker-pattern-the-build-container-b0d0e86ad601#.qzgrao7jy). Building from a maven image prefilled with all your project's dependencies should yield faster performance on Mac or Windows than mounting a volume.
+ 
 Today's tip features is from me: during lunch I attended a very cool demo by one of my colleagues, featuring Scala code in a container. The demo was very cool, but dampened by the fact that after changing one line of Scala code, he rebuilt his Docker image and that took 15 minutes. Looking at sbt refetching all the jars from online maven repositories, I went to talk to him afterwards and told him: all this fetching is not necessary.
 
 ## The problem
