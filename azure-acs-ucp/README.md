@@ -20,7 +20,12 @@ This template provisions:
 ## Installation
 
 Deploy to Azure directly from there:
-[![Deploy to Azure](http://azuredeploy.net/deploybutton.svg)](https://deploy.azure.com/?repository=https://github.com/chanezon/docker-tips/blob/master/azure-acs-ucp?ptmpl=azuredeploy.parameters.json)
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchanezon%2Fdocker-tips%2Fmaster%2Fazure-acs-ucp%2Fazuredeploy.json" target="_blank">
+    <img src="http://azuredeploy.net/deploybutton.png"/>
+</a>
+<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fchanezon%2Fdocker-tips%2Fmaster%2Fazure-acs-ucp%2Fazuredeploy.json" target="_blank">
+    <img src="http://armviz.io/visualizebutton.png"/>
+</a>
 
 Or use the Azure CLI and follow these steps:
 * Install azure cli
