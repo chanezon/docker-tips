@@ -20,6 +20,7 @@ This template provisions:
 ## Installation
 
 Deploy to Azure directly from there:
+
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fchanezon%2Fdocker-tips%2Fmaster%2Fazure-acs-ucp%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
