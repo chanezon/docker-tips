@@ -19,7 +19,10 @@ This template provisions:
 
 ## Installation
 
-Steps:
+Deploy to Azure directly from there:
+[![Deploy to Azure](http://azuredeploy.net/deploybutton.svg)](https://deploy.azure.com/?repository=https://github.com/chanezon/docker-tips/blob/master/azure-acs-ucp?ptmpl=azuredeploy.parameters.json)
+
+Or use the Azure CLI and follow these steps:
 * Install azure cli
 * azure login
 * get a [trial or production ucp license](https://docs.docker.com/ucp/production-install/#step-7-license-your-installation)
