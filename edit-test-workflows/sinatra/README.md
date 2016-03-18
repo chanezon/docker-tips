@@ -8,9 +8,14 @@ To develop the app:
 ```
 docker build -t sinapp .
 docker build -t sinappdev -f Dockerfile.dev .
-docker run -d -v $(pwd):/app1 -p 3000:3000 sinappdev
+docker run -d -v $(pwd):/app -p 3000:3000 sinappdev
 ```
 
 Then you can edit files in your local directory, save and shift-reload in your browser to see the changes in action. For example edit hello.rb and change the message, then `curl <hostname>:3000`.
 
+When you have tested your app and it works, build the non dev version and push it to hub.:
+```
+docker build -t <hub-username>/sinapp .
+docker push <hub-username>/sinapp
+```
 

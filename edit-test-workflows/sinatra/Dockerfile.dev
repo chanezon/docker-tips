@@ -4,4 +4,4 @@ MAINTAINER Patrick Chanezon <chanezon@docker.com>
 RUN gem install rerun
 VOLUME $APP_HOME
 # Start server
-CMD ["rerun", "--force-polling", "--", "ruby", "app.rb"]
+CMD ["rerun", "ruby", "app.rb"]
