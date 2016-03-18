@@ -2,10 +2,6 @@ FROM sinapp
 MAINTAINER Patrick Chanezon <chanezon@docker.com>
 
 RUN gem install rerun
-ENV APP_HOME /app1
 VOLUME $APP_HOME
-WORKDIR $APP_HOME
 # Start server
-ENV PORT 3000
-EXPOSE 3000
-CMD ["rerun", "ruby", "hello.rb"]
+CMD ["rerun", "--force-polling", "--", "ruby", "app.rb"]
