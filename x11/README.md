@@ -1,5 +1,7 @@
 # Running Graphical applications in Docker for Mac
 
+<img src="/img/scatter-plot.png"/>
+
 ## Setup
 
 Docker is used a lot to build, ship and run server-side microservices. But one of the undervalued benefits of containerization is that it allows you to containerize the development process as well. Application development involves a lot of yak-shaving: install a runtime, an IDE, a database, configure it all, repeat and rinse for each app and all their versions, using different versions of runtimes eventually (rvm for Ruby, nvm for Node, VirtualEnv for Python, ...). This post is about how to containerize your development workflow, including using graphical apps such as IDEs, editors, Image and vector graphics editors or scientific programs. Developers on Linux were able to do that since [Jessie Frazelle's series of blog posts](https://blog.jessfraz.com/post/docker-containers-on-the-desktop/) and [talks](https://www.youtube.com/watch?v=GsLZz8cZCzc), mounting the X11 socket inside the container: this post is about how to leverage these tools from Docker for Mac.
@@ -146,12 +148,10 @@ docker run -e DISPLAY=$DISPLAY_MAC -it \
 
 ### Chrome
 
-Jess' Chrome image.
+Jess' Chrome image does not work for me. I need to investigate what the issue is.
 ```
 docker run -e DISPLAY=$DISPLAY_MAC -it jess/chrome 
 ```
-
-<img src="/img/firefox.png"/>
 
 ### Gnu Octave
 
@@ -168,8 +168,6 @@ epflsti/octave-x11-novnc-docker:latest octave
 
 <img src="/img/octave.png"/>
 
-cf https://github.com/VictoriaLynn/plotting-examples#3d-scatter-plot
-
 ### SciPy
 
 Read [Cameron Taggart's blog post](http://blog.ctaggart.com/2016/03/gnu-octave-via-docker-x11.html) and look at [Victoria Lynn's repo](https://github.com/VictoriaLynn/plotting-examples)for Octave and SciPy.
@@ -185,8 +183,6 @@ docker exec -it 3drender bash -c "cd /scatter/3D-scatter/ && source activate pyt
 ```
 
 <img src="/img/scatter-plot.png"/>
-
-cf https://github.com/VictoriaLynn/plotting-examples#3d-scatter-plot
 
 ### Credits / Additional resources
 
