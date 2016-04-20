@@ -8,14 +8,15 @@ Docker is used a lot to build, ship and run server-side microservices. But one o
 
 Docker for Mac lets you run any Linux executable in an isolated process on Mac. A graphical app is just another process, that needs access to the X11 socket of the system, or an X11 server. You can run X11 applications on a Mac using an open source project called [Xquartz](http://www.xquartz.org/). The steps to expose XQuartz to a Linux process running in Docker are simple:
 1. install XQuartz from [xquartz.org](http://www.xquartz.org/)
-Then 2 choices:
-2. Proxy the XQuartz socket to port 6000 on the bridge network accessible from the VM running Docker
+Then you have 3 choices:
+1. Proxy the XQuartz socket to port 6000 on the bridge network accessible from the VM running Docker
 or
-3. Tell Xquartz to accept network calls, and add the hostname of the Docker VM to X11's access control list. The hostname from where Docker for Mac makes calls is `docker.local`. 
+2. Tell Xquartz to accept network calls, and add the hostname of the Docker VM to X11's access control list. The hostname from where Docker for Mac makes calls is `docker.local`. This is not very secure.
+3. Tell Xquartz to accept network calls and require authentication, setup X11 security using xauth, and mount ~/.Xauthority in the container.
 
 Docker for Mac bridge is called bridge100, and its ip address is `ifconfig bridge100 | grep "inet " | cut -d " " -f2`
 
-Thus, after you install XQuartz, the 2 methods are as follows.
+Thus, after you install XQuartz, the 3 methods are as follows.
 
 ### Proxying
 
@@ -37,7 +38,7 @@ startx
 docker run -e DISPLAY=$DISPLAY_MAC -it jess/geary
 ```
 
-### Exposing X11 on the network
+### Exposing X11 on the network, with no authentication
 
 Disadvantage of this is that it ios insecure if you don't use a firewall on your machine. There are ways to set X11 security with XQuartz but I have not investigated that yet.
 
@@ -60,6 +61,50 @@ startx
 docker run -e DISPLAY=$DISPLAY_MAC -it jess/geary
 ```
 
+### Exposing X11 on the network, with authentication
+
+Launch XQuartz and in security settings, set authenticate connexions and expose on network.
+
+<img src="/img/xquartz-settings-auth.png"/>
+
+In a Terminal, list the magic cookies that have been set, and add one for the Docker VM bridhe IP. 
+```
+$ export DISPLAY_MAC=`ifconfig bridge100 | grep "inet " | cut -d " " -f2`:0
+$ xauth list
+pc34.home/unix:0  MIT-MAGIC-COOKIE-1  491476ce33cxxx86d4bfbcea45
+pc34.home:0  MIT-MAGIC-COOKIE-1  491476ce33cxxx86d4bfbcea45
+$ export DISPLAY=$DISPLAY_MAC
+$ xauth
+Using authority file /Users/pat/.Xauthority
+xauth> add 192.168.64.1:0 . 491476ce33cxxx86d4bfbcea45
+xauth> exit
+Writing authority file /Users/pat/.Xauthority
+$ xauth list
+pc34.home/unix:0  MIT-MAGIC-COOKIE-1  491476ce33cxxx86d4bfbcea45
+pc34.home:0  MIT-MAGIC-COOKIE-1  491476ce33cxxx86d4bfbcea45
+192.168.64.1:0  MIT-MAGIC-COOKIE-1  491476ce33cxxx86d4bfbcea45
+pc34:docker-tips pat$ docker run -e DISPLAY=$DISPLAY_MAC -v ~/.Xauthority:/root/.Xauthority -it jess/gimp
+
+```
+
+In your .bashrc:
+```
+export DISPLAY_MAC=`ifconfig bridge100 | grep "inet " | cut -d " " -f2`:0
+defaults write org.macosforge.xquartz.X11 nolisten_tcp -boolean false
+
+function startx() {
+	if [ -z "$(ps -ef|grep XQuartz|grep -v grep)" ] ; then
+	    open -a XQuartz
+	fi
+}
+```
+
+Create a container using X11:
+```
+startx
+docker run -e DISPLAY=$DISPLAY_MAC -v ~/.Xauthority:/root/.Xauthority -it jess/geary
+```
+
 ### Troubleshooting
 
 Checking that port 6000 is exposed.
@@ -71,7 +116,9 @@ Checking XQuartz / Preferences / Security / "Allow connections from network clie
 
 ## Examples
 
-The examples assume you have started XQuartz (xstart) and that you have setup the DISPLAY_MAC environment variable.
+The examples assume you have started XQuartz (xstart) and that you have setup the DISPLAY_MAC environment variable. 
+
+Examples are shown without authentication. Just add -v ~/.Xauthority:/root/.Xauthority (or mount it under the home directory of the user in the Docker image that is used to start the process).
 
 ### Spring Tool Suite
 
