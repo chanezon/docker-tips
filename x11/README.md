@@ -40,7 +40,7 @@ docker run -e DISPLAY=$DISPLAY_MAC -it jess/geary
 
 ### Exposing X11 on the network, with no authentication
 
-Disadvantage of this is that it ios insecure if you don't use a firewall on your machine. There are ways to set X11 security with XQuartz but I have not investigated that yet.
+This approach is insecure, especially if you don't use a firewall on your machine. For a more secure approach see the next section.
 
 In your .bashrc:
 ```
