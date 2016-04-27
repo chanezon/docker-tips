@@ -9,12 +9,10 @@ Docker is used a lot to build, ship and run server-side microservices. But one o
 Docker for Mac lets you run any Linux executable in an isolated process on Mac. A graphical app is just another process, that needs access to the X11 socket of the system, or an X11 server. You can run X11 applications on a Mac using an open source project called [Xquartz](http://www.xquartz.org/). The steps to expose XQuartz to a Linux process running in Docker are simple:
 1. install XQuartz from [xquartz.org](http://www.xquartz.org/)
 Then you have 3 choices:
-1. Proxy the XQuartz socket to port 6000 on the bridge network accessible from the VM running Docker
+1. Proxy the XQuartz socket to port 6000
 or
-2. Tell Xquartz to accept network calls, and add the hostname of the Docker VM to X11's access control list. The hostname from where Docker for Mac makes calls is `docker.local`. This is not very secure.
+2. Tell Xquartz to accept network calls. This is not very secure.
 3. Tell Xquartz to accept network calls and require authentication, setup X11 security using xauth, and mount ~/.Xauthority in the container.
-
-Docker for Mac bridge is called bridge100, and its ip address is `ifconfig bridge100 | grep "inet " | cut -d " " -f2`
 
 Thus, after you install XQuartz, the 3 methods are as follows.
 
@@ -22,7 +20,7 @@ Thus, after you install XQuartz, the 3 methods are as follows.
 
 In your .bashrc:
 ```
-export DISPLAY_MAC=`ifconfig bridge100 | grep "inet " | cut -d " " -f2`:0
+export DISPLAY_MAC=`ifconfig en0 | grep "inet " | cut -d " " -f2`:0
 
 function startx() {
 	if [ -z "$(ps -ef|grep XQuartz|grep -v grep)" ] ; then
@@ -44,13 +42,12 @@ This approach is insecure, especially if you don't use a firewall on your machin
 
 In your .bashrc:
 ```
-export DISPLAY_MAC=`ifconfig bridge100 | grep "inet " | cut -d " " -f2`:0
+export DISPLAY_MAC=`ifconfig en0 | grep "inet " | cut -d " " -f2`:0
 defaults write org.macosforge.xquartz.X11 nolisten_tcp -boolean false
 
 function startx() {
 	if [ -z "$(ps -ef|grep XQuartz|grep -v grep)" ] ; then
 	    open -a XQuartz
-		xhost + docker.local
 	fi
 }
 ```
@@ -69,7 +66,7 @@ Launch XQuartz and in security settings, set authenticate connexions and expose 
 
 In a Terminal, list the magic cookies that have been set, and add one for the Docker VM bridhe IP. 
 ```
-$ export DISPLAY_MAC=`ifconfig bridge100 | grep "inet " | cut -d " " -f2`:0
+$ export DISPLAY_MAC=`ifconfig en0 | grep "inet " | cut -d " " -f2`:0
 $ xauth list
 pc34.home/unix:0  MIT-MAGIC-COOKIE-1  491476ce33cxxx86d4bfbcea45
 pc34.home:0  MIT-MAGIC-COOKIE-1  491476ce33cxxx86d4bfbcea45
@@ -89,7 +86,7 @@ pc34:docker-tips pat$ docker run -e DISPLAY=$DISPLAY_MAC -v ~/.Xauthority:/root/
 
 In your .bashrc:
 ```
-export DISPLAY_MAC=`ifconfig bridge100 | grep "inet " | cut -d " " -f2`:0
+export DISPLAY_MAC=`ifconfig en0 | grep "inet " | cut -d " " -f2`:0
 defaults write org.macosforge.xquartz.X11 nolisten_tcp -boolean false
 
 function startx() {
