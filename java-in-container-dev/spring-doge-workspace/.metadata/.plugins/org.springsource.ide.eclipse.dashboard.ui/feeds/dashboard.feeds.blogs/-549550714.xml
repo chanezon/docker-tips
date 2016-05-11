@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Spring</title>
+  <link rel="alternate" href="https://spring.io/blog" />
+  <link rel="self" href="https://spring.io/blog.atom" />
+  <id>http://spring.io/blog.atom</id>
+  <icon>https://spring.io/favicon.ico</icon>
+  <updated>2016-05-11T12:14:00Z</updated>
+  <entry>
+    <title>Spring Cloud Brixton.RELEASE is available</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/05/11/spring-cloud-brixton-release-is-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Spencer Gibb</name>
+    </author>
+    <id>tag:spring.io,2016-05-11:2498</id>
+    <updated>2016-05-11T12:14:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team, I am pleased to announce that the &lt;a href="http://cloud.spring.io"&gt;Spring Cloud Brixton&lt;/a&gt; Release Train has reached General Availability. The release is available today and can be found in our &lt;a href="http://repo.spring.io/release"&gt;Spring Release repository&lt;/a&gt; and &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22spring-cloud-dependencies%22"&gt;Maven Central&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We would like to thank many community contributors and testers for their help. There have been many pull requests, issues and conversations that have made Spring Cloud Brixton better.&lt;/p&gt;&lt;h4&gt;&lt;a href="#highlights" class="anchor" name="highlights"&gt;&lt;/a&gt;Highlights&lt;/h4&gt;
+&lt;p&gt;Some of the highlights of the Brixton &lt;a href="https://spring.io/blog/2015/06/26/spring-cloud-service-release-angel-sr3#release-train"&gt;Release Train&lt;/a&gt; are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Boot 1.3.x and Spring Framework 4.2.x support&lt;/li&gt;
+  &lt;li&gt;Hashicorp Consul support for service registration/discovery &amp;amp; configuration via Spring Cloud Consul&lt;/li&gt;
+  &lt;li&gt;Apache Zookeeper support for service registration/discovery, configuration via Spring Cloud Zookeper and leader election in Spring Cloud Cluster&lt;/li&gt;
+  &lt;li&gt;Distributed tracing through the Spring Cloud Sleuth abstraction with two out of the box implementations: one supporting logging (ideal for log collectors and multiplexers like Logstash and Loggregator) and one supporting Twitter&amp;rsquo;s Zipkin&lt;/li&gt;
+  &lt;li&gt;Netflix &lt;a href="http://techblog.netflix.com/2014/12/introducing-atlas-netflixs-primary.html"&gt;Atlas Telemetry System&lt;/a&gt;, the next generation &lt;a href="https://github.com/Netflix/spectator/wiki"&gt;Spectator Metrics library&lt;/a&gt; and recent versions of Eureka, Ribbon, Hystrix and Feign are available in Spring Cloud Netflix&lt;/li&gt;
+  &lt;li&gt;Spring Cloud Bus is now powered by the recently released &lt;a href="https://spring.io/blog/2016/05/10/spring-cloud-stream-1-0-0-release-is-available"&gt;Spring Cloud Stream&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Cluster Leadership election and locks via Spring Cloud Cluster&lt;/li&gt;
+  &lt;li&gt;Export of Spring Boot metrics to Amazon Cloudwatch, and native support for Amazon RDS&lt;/li&gt;
+&lt;/ul&gt;&lt;h4&gt;&lt;a href="#the-following-modules-are-part-of-brixton-release" class="anchor" name="the-following-modules-are-part-of-brixton-release"&gt;&lt;/a&gt;The following modules are part of Brixton.RELEASE:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://cloud.spring.io/spring-cloud-aws/"&gt;Spring Cloud AWS&lt;/a&gt; 1.1.0.RELEASE&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://cloud.spring.io/spring-cloud-bus/"&gt;Spring Cloud Bus&lt;/a&gt; 1.1.0.RELEASE&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://cloud.spring.io/spring-cloud-cloudfoundry/"&gt;Spring Cloud Cloud Foundry&lt;/a&gt; 1.0.0.RELEASE&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-cluster"&gt;Spring Cloud Cluster&lt;/a&gt; 1.0.0.RELEASE&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-commons"&gt;Spring Cloud Commons&lt;/a&gt; 1.1.0.RELEASE&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://cloud.spring.io/spring-cloud-config/"&gt;Spring Cloud Config&lt;/a&gt; 1.1.0.RELEASE&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://cloud.spring.io/spring-cloud-consul/"&gt;Spring Cloud Consul&lt;/a&gt; 1.0.0.RELEASE&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://cloud.spring.io/spring-cloud-netflix/"&gt;Spring Cloud Netflix&lt;/a&gt; 1.1.0.RELEASE&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://cloud.spring.io/spring-cloud-security/"&gt;Spring Cloud Security&lt;/a&gt; 1.1.0.RELEASE&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://cloud.spring.io/spring-cloud-sleuth/"&gt;Spring Cloud Sleuth&lt;/a&gt; 1.0.0.RELEASE&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://cloud.spring.io/spring-cloud-stream/"&gt;Spring Cloud Stream&lt;/a&gt; 1.0.0.RELEASE&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://cloud.spring.io/spring-cloud-zookeeper/"&gt;Spring Cloud Zookeeper&lt;/a&gt; 1.0.0.RELEASE&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And, as always, we welcome feedback: either in &lt;a href="https://github.com/spring-cloud"&gt;GitHub&lt;/a&gt;, on &lt;a href="http://stackoverflow.com/questions/tagged/spring-cloud"&gt;Stack Overflow&lt;/a&gt;, or on &lt;a href="https://twitter.com/SpringCloudOSS"&gt;Twitter&lt;/a&gt;.&lt;/p&gt;&lt;h4&gt;&lt;a href="#roadmap" class="anchor" name="roadmap"&gt;&lt;/a&gt;Roadmap&lt;/h4&gt;
+&lt;p&gt;The next Spring Cloud Release Train will be called Camden and will follow as soon as possible after &lt;a href="https://github.com/spring-projects/spring-boot/milestones/1.4.0"&gt;Spring Boot 1.4&lt;/a&gt;.&lt;/p&gt;&lt;h4&gt;&lt;a href="#notes" class="anchor" name="notes"&gt;&lt;/a&gt;Notes:&lt;/h4&gt;
+&lt;p&gt;A &lt;code&gt;@LoadBalanced&lt;/code&gt; &lt;code&gt;RestTemplate&lt;/code&gt; is no longer created by default. See the &lt;a href="http://cloud.spring.io/spring-cloud-static/spring-cloud.html#_spring_resttemplate_as_a_load_balancer_client"&gt;updated documentation for details&lt;/a&gt;. You need to create it in your application’s configuration. For example:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Configuration&#xD;
+public class MyConfiguration {&#xD;
+&#xD;
+    @LoadBalanced&#xD;
+    @Bean&#xD;
+    RestTemplate restTemplate() {&#xD;
+        return new RestTemplate();&#xD;
+    }&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Please note the correct BOM to use is &lt;code&gt;spring-cloud-dependencies&lt;/code&gt; not &lt;code&gt;spring-cloud-starter-parent&lt;/code&gt; (see Getting Started below).&lt;/p&gt;&lt;h4&gt;&lt;a href="#getting-started" class="anchor" name="getting-started"&gt;&lt;/a&gt;Getting Started&lt;/h4&gt;
+&lt;p&gt;The easiest way to get started with Brixton.RELEASE is to head to &lt;a href="http://start.spring.io"&gt;http://start.spring.io&lt;/a&gt;. If you want to write your build file by hand with Maven with a BOM (dependency management only):&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint xml"&gt;&lt;br/&gt;&amp;lt;dependencyManagement&amp;gt;&#xD;
+  &amp;lt;dependencies&amp;gt;&#xD;
+    &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+    &amp;lt;artifactId&amp;gt;spring-cloud-dependencies&amp;lt;/artifactId&amp;gt;&#xD;
+    &amp;lt;version&amp;gt;Brixton.RELEASE&amp;lt;/version&amp;gt;&#xD;
+    &amp;lt;type&amp;gt;pom&amp;lt;/type&amp;gt;&#xD;
+    &amp;lt;scope&amp;gt;import&amp;lt;/scope&amp;gt;&#xD;
+  &amp;lt;/dependencies&amp;gt;&#xD;
+&amp;lt;/dependencyManagement&amp;gt;&#xD;
+&amp;lt;dependencies&amp;gt;&#xD;
+  &amp;lt;dependency&amp;gt;&#xD;
+    &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+    &amp;lt;artifactId&amp;gt;spring-cloud-starter-config&amp;lt;/artifactId&amp;gt;&#xD;
+  &amp;lt;/dependency&amp;gt;&#xD;
+  &amp;lt;dependency&amp;gt;&#xD;
+    &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+    &amp;lt;artifactId&amp;gt;spring-cloud-starter-eureka&amp;lt;/artifactId&amp;gt;&#xD;
+  &amp;lt;/dependency&amp;gt;&#xD;
+  ...&#xD;
+&amp;lt;/dependencies&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or with Gradle:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;buildscript {&#xD;
+  dependencies {&#xD;
+    classpath(&amp;quot;org.springframework.boot:spring-boot-gradle-plugin:1.3.5.RELEASE&amp;quot;)&#xD;
+  }&#xD;
+}&#xD;
+repositories {&#xD;
+  maven {&#xD;
+    mavenCentral()&#xD;
+  }&#xD;
+}&#xD;
+apply plugin: &amp;#39;spring-boot&amp;#39;&#xD;
+&#xD;
+dependencyManagement {&#xD;
+  imports {&#xD;
+    mavenBom &amp;#39;org.springframework.cloud:spring-cloud-dependencies:Brixton.RELEASE&amp;#39;&#xD;
+  }&#xD;
+}&#xD;
+&#xD;
+dependencies {&#xD;
+    compile &amp;#39;org.springframework.cloud:spring-cloud-starter-config&amp;#39;&#xD;
+    compile &amp;#39;org.springframework.cloud:spring-cloud-starter-eureka&amp;#39;&#xD;
+    //...&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you are attending the &lt;a href="http://www.springio.net"&gt;Spring I/O conference&lt;/a&gt; next week there will be &lt;a href="http://lanyrd.com/2016/springio16/"&gt;various presentations&lt;/a&gt; on Spring Cloud from myself, Josh Long, Dave Syer and others.&lt;/p&gt;
+&lt;p&gt;This is also a reminder that &lt;a href="http://springoneplatform.io"&gt;Spring One Platform&lt;/a&gt; will be taking place in Las Vegas between August 1-4 this year, and you should consider &lt;a href="https://2016.event.springoneplatform.io/register"&gt;getting your ticket&lt;/a&gt; if you haven’t done so already.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Cloud Stream 1.0.0.RELEASE is available</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/05/10/spring-cloud-stream-1-0-0-release-is-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Marius Bogoevici</name>
+    </author>
+    <id>tag:spring.io,2016-05-10:2497</id>
+    <updated>2016-05-10T22:26:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team, I am pleased to announce the general availability of Spring Cloud Stream 1.0.0.RELEASE. The artifacts can be found in &lt;a href="https://repo.spring.io"&gt;Spring Repository&lt;/a&gt; as well as &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Cspring-cloud-stream"&gt;Maven Central&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The goal of &lt;a href="https://cloud.spring.io/spring-cloud-stream"&gt;Spring Cloud Stream&lt;/a&gt; is to be a lightweight framework for developing event-driven microservices, building on the ease of development and deployment of Spring Boot, and the component model and integration capabilities of Spring Integration. As part of the Spring Cloud family of projects, it has a specific focus on cloud-native architectures.&lt;/p&gt;
+&lt;p&gt;In order to simplify the development of both streaming and more traditional enterprise integration, it provides a number of primitives and abstractions such as:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Persistent publish-subscribe semantics between different logical applications;&lt;/li&gt;
+  &lt;li&gt;Consumer group support for scaling individual applications;&lt;/li&gt;
+  &lt;li&gt;Declarative partitioning support;&lt;/li&gt;
+  &lt;li&gt;Declarative message conversion support;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All features above are implemented in a middleware agnostic-fashion through the framework’s Binder abstraction, that allows for different implementations to adapt the model to the native capabilities of the communication middleware. This allows the developers to focus on the business abstractions, and also to develop reusable components that can be used with different flavors of messaging middleware. Spring Cloud Stream 1.0.0.RELEASE ships with Binders for Apache Kafka and Rabbit MQ. Additional implementations, such as Gemfire are available.&lt;/p&gt;
+&lt;p&gt;The whole list of features can be found in the &lt;a href="http://docs.spring.io/spring-cloud-stream/docs/1.0.0.RELEASE/reference/htmlsingle/"&gt;reference documentation&lt;/a&gt; and examples can be found &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;From the &lt;a href="https://github.com/spring-cloud/spring-cloud-stream/commit/a288ed1fbb2c974e57a099f849d90f5c74c2e757"&gt;first commit&lt;/a&gt;, 21 contributors, from the Spring team and the community have been adding 506 commits and resolving 189 issues. &lt;/p&gt;
+&lt;p&gt;Spring Cloud Stream has an older heritage than its commit history. It has been born as part of rethinking Spring XD (to which it owes a significant part of its current code) from a cloud-native, microservice-oriented perspective, more specifically redefining the notions of module and message bus in a Spring Boot and Spring Cloud-friendly fashion. It provides the mechanisms to write long-lived microservices that can be orchestrated and deployed across various platforms (Cloud Foundry, Apache YARN, Kubernetes, Apache Mesos) in sophisticated streaming pipelines by &lt;a href="http://cloud.spring.io/spring-cloud-dataflow/"&gt;Spring Cloud Data Flow&lt;/a&gt;, in counterpart with its task-oriented sibling &lt;a href="http://cloud.spring.io/spring-cloud-task/"&gt;Spring Cloud Task&lt;/a&gt;. It powers a &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-app-starters"&gt;rich ecosystem of Spring Cloud Stream applications&lt;/a&gt; that integrate with various types of middleware and data stores, owing to its Spring Integration foundation. It also powers a few other Spring Cloud projects: &lt;a href="http://cloud.spring.io/spring-cloud-bus/"&gt;Spring Cloud Bus&lt;/a&gt;, &lt;a href="http://cloud.spring.io/spring-cloud-netflix"&gt;Spring Cloud Hystrix&lt;/a&gt; and &lt;a href="http://cloud.spring.io/spring-cloud-sleuth/"&gt;Spring Cloud Sleuth&lt;/a&gt;, who as early adopters have provided tremendously valuable input.&lt;/p&gt;
+&lt;p&gt;Thanks and congratulations to everyone who has been part of this this journey, current and former members of the Spring XD/Spring Cloud Data Flow team, and especially community members who have either been contributing directly or providing the more than necessary feedback for the success of the project. We couldn’t have gotten here without your help and hope you continue to do so. &lt;/p&gt;
+&lt;p&gt;You can find us on &lt;a href="https://github.com/spring-cloud/spring-cloud-stream"&gt;GitHub&lt;/a&gt;, on &lt;a href="http://stackoverflow.com/questions/tagged/spring-cloud-stream"&gt;Stack Overflow&lt;/a&gt;, or on &lt;a href="https://twitter.com/springcloudoss"&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As for the future, our intended &lt;a href="https://github.com/spring-cloud/spring-cloud-stream/milestones/1.1.0.M1"&gt;roadmap&lt;/a&gt; includes such items as:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Kafka 0.9 client support&lt;/li&gt;
+  &lt;li&gt;Support for reactive binders and a reactive programming model&lt;/li&gt;
+  &lt;li&gt;Adding new types of binders such as JMS or Kinesis&lt;/li&gt;
+  &lt;li&gt;Schema registration and evolution support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Join us for the next leg of the journey!&lt;/p&gt;
+&lt;hr/&gt;
+&lt;p&gt;If you are attending Spring IO in Barcelona, I will be talking about Spring Cloud Stream on Friday, May 20. There are many other great talks from the Spring team members, so check the &lt;a href="http://www.springio.net/agenda/"&gt;agenda&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;This is also a reminder that &lt;a href="http://springoneplatform.io"&gt;Spring One Platform&lt;/a&gt; will be taking place in Las Vegas between August 1-4 this year, and you should consider &lt;a href="https://2016.event.springoneplatform.io/register"&gt;getting your ticket&lt;/a&gt; if you haven’t done so already. &lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - May 10th, 2016</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/05/10/this-week-in-spring-may-10th-2016" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2016-05-10:2496</id>
+    <updated>2016-05-10T18:52:45Z</updated>
+    <content type="html">&lt;p&gt;Auntie Em! Time sure is flying! Welcome to another installment of &lt;em&gt;This Week in Spring!&lt;/em&gt; This week I&amp;rsquo;m in Warsaw for a Cloud Native meetup and Krakow, Poland for the spectacular Geecon event! &lt;a href="http://twitter.com/starbuxman"&gt;If you&amp;rsquo;re around, don&amp;rsquo;t hesitate to say hi&lt;/a&gt; for Also, some &lt;em&gt;very&lt;/em&gt; big news coming! Stay tuned &lt;a href="http://spring.io/blog"&gt;to the Spring.io blog tomorrow&lt;/a&gt;! Anyway, as usual, we&amp;rsquo;ve got a lot to look at so let&amp;rsquo;s get to it! &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Security lead Rob Winch &lt;a href="https://spring.io/blog/2016/05/05/spring-security-4-1-0-released"&gt;just announced Spring Security 4.1.0 RELEASE&lt;/a&gt;! This is a big release with &lt;a href="http://docs.spring.io/spring-security/site/docs/4.1.x/reference/htmlsingle/#new"&gt;a lot of cool stuff&lt;/a&gt;!&lt;/li&gt;
+  &lt;li&gt;Spring IO Platform lead &lt;a href="https://spring.io/blog/2016/05/09/spring-io-platform-2-0-4-release"&gt;Andy Wilkinson just announced Spring IO Platform 2.0.4 release&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring AMQP and messaging guru Gary Russell just &lt;a href="https://spring.io/blog/2016/05/06/spring-amqp-1-6-0-release-candidate-and-1-5-6-available"&gt;announced Spring AMQP 1.6.0 RC (and 1.5.6)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring framework &lt;a href="https://spring.io/blog/2016/05/06/spring-framework-4-3-rc2-4-2-6-and-3-2-17-available-now"&gt;ninja Stéphane Nicoll just announced Spring Framework 4.3 RC2, 4.2.6 and 3.2.17 are now available&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;not one to sit on his laurels, &lt;a href="https://spring.io/blog/2016/05/10/spring-boot-1-3-5-released"&gt;Stéphane &lt;em&gt;also&lt;/em&gt; announced Spring Boot 1.3.5&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;This &lt;a href="https://www.datawire.io/continuous-delivery-ecosystem-for-microservices/"&gt;blog has a really nice look at some of the players in the microservice ecosystem&lt;/a&gt;, albeit a high level one.&lt;/li&gt;
+  &lt;li&gt;Want to learn about the service package manager that underpins Cloud Foundry, BOSH? &lt;a href="http://www.engineerbetter.com/bosh-concourse.html"&gt;This blog&amp;rsquo;s a &lt;em&gt;very&lt;/em&gt; fine start&lt;/a&gt;!&lt;/li&gt;
+  &lt;li&gt;Jessica Kerr and Continuous Delivery luminary Jez Humble had a nice discussion at Craft Conf, it seems, and &lt;a href="http://blog.jessitron.com/2016/05/tradeoffs-in-coordination-among-teams.html"&gt;Jessica&amp;rsquo;s resulting blog post on tradeoffs in coordination among teams&lt;/a&gt; is well worth a read&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://blog.pivotal.io/data-science-pivotal/products/using-data-science-to-make-sense-of-unstructured-text"&gt;Using Data Science to Make Sense of Unstructed Text&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I enjoyed this nice post &lt;a href="https://vanwilgenburg.wordpress.com/2016/04/01/spring-boot-http2/"&gt;on Spring Boot and HTTP 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;a nice post from my buddy Markus Eisele on our joint talk at O&amp;rsquo;Reilly&amp;rsquo;s Software Architecture show where we &lt;a href="http://blog.eisele.net/2016/04/integration-architecture-with-java-ee-and-spring.html"&gt;discussed Spring and Java EE integration patterns&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Boot 1.3.5 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/05/10/spring-boot-1-3-5-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Stéphane Nicoll</name>
+    </author>
+    <id>tag:spring.io,2016-05-10:2495</id>
+    <updated>2016-05-10T06:53:33Z</updated>
+    <content type="html">&lt;p&gt;Shortly after 1.3.4, we&amp;rsquo;ve just released &lt;a href="https://github.com/spring-projects/spring-boot/issues?q=milestone%3A1.3.5+is%3Aclosed"&gt;Spring Boot 1.3.5&lt;/a&gt; as we&amp;rsquo;ve identified a &lt;a href="https://github.com/spring-projects/spring-boot/issues/5901"&gt;rather nasty regression&lt;/a&gt; with the Spring Integration auto-configuration. The bits are available from &lt;a href="http://repo.spring.io/release"&gt;repo.spring.io&lt;/a&gt; and &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.springframework.boot%22"&gt;Maven Central&lt;/a&gt;, as usual.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring IO Platform 2.0.4.RELEASE</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/05/09/spring-io-platform-2-0-4-release" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Andy Wilkinson</name>
+    </author>
+    <id>tag:spring.io,2016-05-09:2494</id>
+    <updated>2016-05-09T12:27:19Z</updated>
+    <content type="html">&lt;p&gt;&lt;a href="http://platform.spring.io/platform"&gt;Spring IO Platform&lt;/a&gt; 2.0.4.RELEASE is now available from both &lt;a href="http://repo.spring.io/release"&gt;repo.spring.io&lt;/a&gt; and &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3Aio.spring.platform"&gt;Maven Central&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;This maintenance release upgrades the versions of a number of the projects in the Platform to pick up their latest maintenance releases:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Reactor 2.0.8.RELEASE&lt;/li&gt;
+  &lt;li&gt;Spring AMQP 1.5.5.RELEASE&lt;/li&gt;
+  &lt;li&gt;Spring Batch 3.0.7.RELEASE&lt;/li&gt;
+  &lt;li&gt;Spring Boot 1.3.4.RELEASE&lt;/li&gt;
+  &lt;li&gt;Spring Cloud Connectors 1.2.2.RELEASE&lt;/li&gt;
+  &lt;li&gt;Spring Framework 4.2.6.RELEASE&lt;/li&gt;
+  &lt;li&gt;Spring Security 4.0.4.RELEASE&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The versions of several third-party dependencies have also been updated.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://platform.spring.io/platform"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/platform/docs/2.0.4.RELEASE/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring AMQP 1.6.0 Release Candidate (and 1.5.6) Available</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/05/06/spring-amqp-1-6-0-release-candidate-and-1-5-6-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Gary Russell</name>
+    </author>
+    <id>tag:spring.io,2016-05-04:2490</id>
+    <updated>2016-05-06T18:43:00Z</updated>
+    <content type="html">&lt;p&gt;We are pleased to announce that the Spring AMQP 1.6 release candidate (1.6.0.RC1) is now available in the &lt;a href="https://repo.spring.io/milestone"&gt;spring milestone repo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The 1.5.6 maintenance release is also available with a &lt;a href="https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10450&amp;version=15517"&gt;few bug fixes&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here is a summary of the 1.6.0 release contents, for more details, refer to the &lt;a href="http://docs.spring.io/spring-amqp/docs/1.6.0.RC1/reference/html/_introduction.html#whats-new"&gt;what&amp;rsquo;s new&lt;/a&gt; in the reference documentation as well as &lt;a href="https://jira.spring.io/issues/?jql=project%20%3D%20AMQP%20AND%20status%20%3D%20Closed%20AND%20fixVersion%20in%20%28%221.6%20M1%22%2C%20%221.6%20M2%22%2C%20%221.6%20RC1%22%29%20%20ORDER%20BY%20fixVersion%2C%20priority%20DESC"&gt;the closed JIRA Issues for this release&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+  &lt;p&gt;A new jar &lt;code&gt;spring-rabbit-test&lt;/code&gt; containing a test harness to help with testing &lt;code&gt;@RabbitListener&lt;/code&gt; methods; see &lt;a href="http://docs.spring.io/spring-amqp/docs/1.6.0.RC1/reference/html/_reference.html#testing"&gt;the testing chapter&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+  &lt;p&gt;Multiple &lt;code&gt;@RabbitListener&lt;/code&gt; annotations on a method (when using Java 8) and the &lt;code&gt;@RabbitListeners&lt;/code&gt; annotation (for pre-Java 8), each allowing the same method to be the listener method for multiple listener containers.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+  &lt;p&gt;Full support for the &lt;a href="https://www.rabbitmq.com/blog/2015/04/16/scheduling-messages-with-rabbitmq/"&gt;Delayed Message Exchange&lt;/a&gt; RabbitMQ plugin.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+  &lt;p&gt;An &lt;code&gt;AsyncRabbitTemplate&lt;/code&gt; returning &lt;code&gt;ListenableFuture&amp;lt;?&amp;gt;&lt;/code&gt; for request/reply messaging.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+  &lt;p&gt;An option to publish &lt;code&gt;ApplicationEvents&lt;/code&gt; when listener containers go idle.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+  &lt;p&gt;The caching connection factory now exposes cache statistics&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+  &lt;p&gt;&lt;code&gt;@RabbitListener&lt;/code&gt; methods now communicate type information to the message converter for inbound messages. This means, for example, the &lt;code&gt;Jackson2JsonMessageConverter&lt;/code&gt; no longer needs a custom class mapper when a message without type information in the headers is received (e.g. from a sender that is not a Spring AMQP app). Instead, the &lt;code&gt;@RabbitListener&lt;/code&gt; method parameter type is used in the conversion. In addition, the &lt;code&gt;Method&lt;/code&gt; and &lt;code&gt;bean&lt;/code&gt; are also made available via message properties to custom converters.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Bean&#xD;
+public SimpleRabbitListenerContainerFactory rabbitListenerContainerFactory(&#xD;
+		ConnectionFactory rabbitConnectionFactory) {&#xD;
+	SimpleRabbitListenerContainerFactory factory = &#xD;
+             new SimpleRabbitListenerContainerFactory();&#xD;
+	factory.setConnectionFactory(rabbitConnectionFactory);&#xD;
+	factory.setMessageConverter(new Jackson2JsonMessageConverter());&#xD;
+	return factory;&#xD;
+}&#xD;
+&#xD;
+public static class MyService {&#xD;
+&#xD;
+	@RabbitListener(queues=&amp;quot;foos&amp;quot;)&#xD;
+	public void handleFoos(Foo foo) {&#xD;
+	    ...&#xD;
+	}&#xD;
+&#xD;
+	@RabbitListener(queues=&amp;quot;lists.of.bars&amp;quot;)&#xD;
+	public void handleBarLists(List&amp;lt;Bar&amp;gt; bars) {&#xD;
+            ...&#xD;
+	}&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+  &lt;p&gt;&lt;code&gt;@RabbitListener&lt;/code&gt; irrecoverable errors are now considered to be fatal by the default error handler, to avoid endless redelivery of such messages.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+  &lt;p&gt;&lt;code&gt;@RabbitListener&lt;/code&gt; &lt;code&gt;@SendTo&lt;/code&gt; addresses (used when the inbound message has no &lt;code&gt;replyTo&lt;/code&gt;) can now contain a &lt;code&gt;SpEL&lt;/code&gt; expression evaluated at runtime against the input and output message.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+  &lt;p&gt;When using java serialized messages, you can now specify a &amp;ldquo;white list&amp;rdquo; of allowable classes/packages for deserialization. This is recommended when receiving serialized objects from untrusted sources.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+  &lt;p&gt;You can now declare &amp;lsquo;internal&amp;rsquo; exchanges to which messages cannot be directly published.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+  &lt;p&gt;The log appenders can now be configured with multiple broker addresses and client properties can be set.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+  &lt;p&gt;&lt;code&gt;@QueueBinding&lt;/code&gt; annotations now support arguments for queues, exchanges and bindings.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We expect to have the final release at the end of May.&lt;/p&gt;
+&lt;p&gt;Please download and try the release candidate so we can address any issues before GA. Next up (2017) is 2.0 which will may require Spring 5 and include some Reactive Streams effort.&lt;/p&gt;
+&lt;p&gt;We welcome any feedback, questions, or help, using the usual mechanisms:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-amqp/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://jira.spring.io/browse/AMQP"&gt;JIRA&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-amqp/blob/master/CONTRIBUTING.adoc"&gt;Contribution&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-amqp"&gt;Help&lt;/a&gt;&lt;/p&gt;
+&lt;div class="callout"&gt;&#xD;
+&lt;div class="callout-title"&gt;Upcoming Conferences&lt;/div&gt;&#xD;
+&lt;p&gt;Be sure to register for &lt;a href="http://www.springio.net/"&gt;Spring I/O conference&lt;/a&gt; where you can learn about the latest and greatest Spring has to offer.&lt;/p&gt;&#xD;
+&lt;p&gt;Also, &lt;a href="http://springoneplatform.io/"&gt;SpringOne Platform&lt;/a&gt; is coming up soon!&lt;/p&gt;&#xD;
+&lt;/div&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Boot 1.3.4 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/05/06/spring-boot-1-3-4-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Stéphane Nicoll</name>
+    </author>
+    <id>tag:spring.io,2016-05-06:2493</id>
+    <updated>2016-05-06T14:10:31Z</updated>
+    <content type="html">&lt;p&gt;Spring Boot 1.3.4 has been released and is available now from &lt;a href="http://repo.spring.io/release"&gt;repo.spring.io&lt;/a&gt; and &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.springframework.boot%22"&gt;Maven Central&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;This maintenance release includes a &lt;a href="https://github.com/spring-projects/spring-boot/issues?q=milestone%3A1.3.4+is%3Aclosed"&gt;number of fixes&lt;/a&gt; and 3rd party dependency updates.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Framework 4.3 RC2, 4.2.6 and 3.2.17 available now</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/05/06/spring-framework-4-3-rc2-4-2-6-and-3-2-17-available-now" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Stéphane Nicoll</name>
+    </author>
+    <id>tag:spring.io,2016-05-06:2492</id>
+    <updated>2016-05-06T13:59:44Z</updated>
+    <content type="html">&lt;p&gt;It is my pleasure to announce that the Spring Framework &lt;a href="https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10000&amp;version=15460"&gt;4.2.6&lt;/a&gt; and &lt;a href="https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10000&amp;version=15518"&gt;3.2.17&lt;/a&gt; maintenance releases &lt;a href="http://projects.spring.io/spring-framework"&gt;are available now&lt;/a&gt;. We also released &lt;a href="https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10000&amp;version=15487"&gt;the second release candidate of the 4.3 line&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;4.3 RC2 contains many refinements and fixes, especially in the web framework area. We are about to finalize 4.3 with a scheduled GA in early June. Preparations towards merging 5.0 features into master will happen right afterwards, with a first 5.0 milestone expected in July.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-framework/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework"&gt;GitHub&lt;/a&gt; | &lt;a href="https://jira.spring.io/browse/SPR"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/htmlsingle/"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Security 4.1.0 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/05/05/spring-security-4-1-0-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Rob Winch</name>
+    </author>
+    <id>tag:spring.io,2016-05-05:2491</id>
+    <updated>2016-05-05T12:15:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the community, I&amp;rsquo;m pleased to announce the release of Spring Security 4.1.0.RELEASE. This release evolved through &lt;a href="https://github.com/spring-projects/spring-security/issues?q=milestone%3A%224.1.0+RC1%22"&gt;4.1.0 RC1&lt;/a&gt;, &lt;a href="https://github.com/spring-projects/spring-security/issues?q=milestone%3A%224.1.0+RC2%22"&gt;4.1.0 RC2&lt;/a&gt;, and &lt;a href="https://github.com/spring-projects/spring-security/issues?q=milestone%3A4.1.0"&gt;4.1.0&lt;/a&gt; closing nearly 200 tickets.&lt;/p&gt;&lt;h1&gt;&lt;a href="#what-s-new-in-spring-security-4-1" class="anchor" name="what-s-new-in-spring-security-4-1"&gt;&lt;/a&gt;What’s New in Spring Security 4.1&lt;/h1&gt;
+&lt;p&gt;You can find highlights of what&amp;rsquo;s new in the &lt;a href="http://docs.spring.io/spring-security/site/docs/4.1.x/reference/htmlsingle/#new"&gt;What’s New in Spring Security 4.1&lt;/a&gt; section of the reference. For details refer to the changlog links above.&lt;/p&gt;&lt;h1&gt;&lt;a href="#contributions" class="anchor" name="contributions"&gt;&lt;/a&gt;Contributions&lt;/h1&gt;
+&lt;p&gt;Without the community we couldn&amp;rsquo;t be the successful project we are today. I&amp;rsquo;d like to thank everyone that created issues &amp;amp; provided feedback. &lt;/p&gt;&lt;h1&gt;&lt;a href="#feedback-please" class="anchor" name="feedback-please"&gt;&lt;/a&gt;Feedback Please&lt;/h1&gt;
+&lt;p&gt;If you have feedback on this release, I encourage you to reach out via &lt;a href="http://stackoverflow.com/questions/tagged/spring-security"&gt;StackOverflow&lt;/a&gt;, &lt;a href="https://github.com/spring-projects/spring-security/issues"&gt;GitHub Issues&lt;/a&gt;, or via the comments section. You can also ping me &lt;a href="https://twitter.com/rob_winch"&gt;@rob_winch&lt;/a&gt; or Joe (our latest full time Spring Security team member) &lt;a href="https://twitter.com/joe_grandja"&gt;@joe_grandja&lt;/a&gt; on Twitter.&lt;/p&gt;
+&lt;p&gt;Of course the best feedback comes in the form of &lt;a href="https://github.com/spring-projects/spring-security/blob/master/CONTRIBUTING.md"&gt;contributions&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-security/"&gt;Project Site&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-security/site/docs/4.1.0.RELEASE/reference/htmlsingle/"&gt;Reference&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-security/site/docs/4.1.0.RELEASE/guides/html5/"&gt;Guides&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-security"&gt;Help&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - May 3rd, 2016</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/05/04/this-week-in-spring-may-3rd-2016" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2016-05-04:2489</id>
+    <updated>2016-05-04T01:30:00Z</updated>
+    <content type="html">&lt;p&gt;I can&amp;rsquo;t even believe it&amp;rsquo;s May already! STOP THE WORLD I WANT OFF! Well, at least the times are exciting! There&amp;rsquo;s so much cool stuff to look at this week so let&amp;rsquo;s get to it!&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;New sessions are up on the shiny new &lt;a href="https://springoneplatform.io/sessions"&gt;SpringOne Platform website&lt;/a&gt; check it out! In addition to an Adrian Cockcroft keynote, we&amp;rsquo;re got speakers booked from Netflix, Google, Comcast, Express Scripts, Kroger, along with Spring leaders like Juergen Hoeller, Dr. Dave Syer, Rossen Stoyanchev, Oliver Gierke, and of course, yours truly!&lt;/li&gt;
+  &lt;li&gt;and join Spring Cloud Data Flow leads Mark Fisher and Mark Pollack for a look at &lt;a href="https://spring.io/blog/2016/04/27/webinar-data-microservices-with-spring-cloud-data-flow"&gt;Data Driven Microservices with Spring Cloud Data Flow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Session and Spring Security lead Rob Winch &lt;a href="https://spring.io/blog/2016/04/28/spring-session-1-2-0-rc3-released"&gt;has just announced Spring Session 1.2.0.RC3&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Spring REST Docs lead &lt;a href="https://spring.io/blog/2016/04/28/spring-rest-docs-1-1-0-rc1"&gt;Andy Wilkinson just announced Spring REST Docs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Cloud Data Flow co-lead &lt;a href="https://spring.io/blog/2016/04/29/spring-cloud-data-flow-1-0-0-m3-released"&gt;Mark Fisher just announced Spring Cloud Data Flow 1.0.0.M3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Janne Valkealahti &lt;a href="https://spring.io/blog/2016/04/29/spring-cloud-data-flow-for-apache-yarn-1-0-0-m2-released"&gt;just announced Spring Cloud Data Flow for Apache YARN&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring and Data wizard Thomas Risberg &lt;a href="https://spring.io/blog/2016/04/29/spring-cloud-data-flow-for-apache-mesos-and-kubernetes-1-0-0-m2-versions-released"&gt;just announced Spring Cloud Data Flow for Apache Mesos and Kubernetes 1.0.0.M2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Cloud Data Flow ninja Eric Bottard just announced &lt;a href="https://spring.io/blog/2016/04/29/spring-cloud-data-flow-for-cloud-foundry-1-0-0-m2-released"&gt;Spring Cloud Data Flow for Cloud Foundry 1.0.0.M2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data lead Christoph Strobl put together a great writeup of &lt;a href="https://spring.io/blog/2016/05/03/what-s-new-in-spring-data-hopper"&gt;what&amp;rsquo;s new in Spring Data Hopper&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data ninja John Blum just wrote up &lt;a href="https://spring.io/blog/2016/04/29/spring-data-geode-1-0-0-apache-geode-incubating-m2-released"&gt;a nice post on what&amp;rsquo;s new in Spring Data Geode&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;our pal Michael Simmons just put together a &lt;a href="http://info.michael-simons.eu/2016/05/02/spring-boot-starter-comfortable-modularization-and-abstraction/"&gt;great writeup of how Spring Boot&amp;rsquo;s auto-configuration works&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Have you been &lt;a href="https://www.cloudfoundry.org/community/planet/"&gt;following the latest and greatest in Cloud Foundry&lt;/a&gt;?&lt;/li&gt;
+  &lt;li&gt;Dan Vega put together a nice video &lt;a href="http://therealdanvega.com/blog/2016/04/27/using-project-lombok-spring-boot"&gt;introducing using Project Lombok with Spring Boot&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Anirudh Bhatnagar put together a nice post &lt;a href="https://www.javacodegeeks.com/2016/04/build-new-web-application-scratch-using-spring-boot-thymeleaf-angularjs-part-1.html"&gt;on using Spring Boot, Thymeleaf and Angular.js together&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I loved this post on &lt;a href="https://www.javacodegeeks.com/2016/05/laziness-extreme-developing-jax-rs-services-spring-boot.html"&gt;using CXF to develop JAX-RS services on top of Spring Boot&lt;/a&gt;. (It would&amp;rsquo;ve been even easier if they&amp;rsquo;d just used Jersey!)&lt;/li&gt;
+  &lt;li&gt;Want to get a local Cloud Foundry environment? &lt;a href="https://blog.pivotal.io/pivotal-cloud-foundry/products/meet-pcf-dev-your-ticket-to-running-cloud-foundry-locally"&gt;Meet PCF Dev: Your Ticket To Running Cloud Foundry Locally&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>What's new in Spring Data Hopper?</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/05/03/what-s-new-in-spring-data-hopper" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Christoph Strobl</name>
+    </author>
+    <id>tag:spring.io,2016-03-17:2430</id>
+    <updated>2016-05-03T09:36:00Z</updated>
+    <content type="html">&lt;p&gt;As we&amp;rsquo;ve just &lt;a href="https://spring.io/blog/2016/04/07/spring-data-release-train-hopper-goes-ga-and-sr1"&gt;shipped the GA release&lt;/a&gt; of Spring Data release train &lt;a href="https://en.wikipedia.org/wiki/Grace_Hopper"&gt;Hopper&lt;/a&gt;, let&amp;rsquo;s take a deeper look at the changes and features that come with the 13 modules on the train. A very fundamental change in the release train&amp;rsquo;s dependencies is the upgrade to Spring Framework 4.2 (currently 4.2.5) as baseline. This is in preparation for the upcoming 4.3 release of the framework. We also took the chance to upgrade our Querydsl integration to 4.x (currently 4.1) which required some breaking changes in very core abstractions. Besides that, Hopper contains quite a few significant major version changes its modules.&lt;/p&gt;
+&lt;p&gt;Those upgrades are mostly driven by major version bumps of the underlying store drivers and implementations that need to be reflected in potential breaking changes to the API exposed by those modules. Some of those modules — like Spring Data Neo4j and Spring Data Couchbase — have already seen a new major release outside the release train and are now re-integrated into it.&lt;/p&gt;
+&lt;p&gt;Please welcome (back):&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Data Couchbase 2.1 based on Couchbase 2.2&lt;/li&gt;
+  &lt;li&gt;Spring Data Elasticsearch 2.0 based on Elasticsearch 2.2&lt;/li&gt;
+  &lt;li&gt;Spring Data Neo4j 4.1 based on Neo4J OGM 2.0&lt;/li&gt;
+  &lt;li&gt;Spring Data Solr 2.0 based on Solr 5.5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Besides those upgrades the team has been working on a whole bunch of new features.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Composable annotations making use of &lt;code&gt;@AliasFor&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Query By Example&lt;/li&gt;
+  &lt;li&gt;Projections for repository query methods&lt;/li&gt;
+  &lt;li&gt;Redis cluster and repository support&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;$lookup&lt;/code&gt; aggregation and bulk operations for MongoDB&lt;/li&gt;
+  &lt;li&gt;Synchronized cache lookup when using Spring 4.3 in Gemfire and Redis&lt;/li&gt;
+  &lt;li&gt;Querydsl 4 support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I&amp;rsquo;d like to spend the rest of the blog post casting a bit more light on some of those features to give you a more detailed overview about them.&lt;/p&gt;&lt;h2&gt;&lt;a href="#query-by-example" class="anchor" name="query-by-example"&gt;&lt;/a&gt;Query By Example&lt;/h2&gt;
+&lt;p&gt;The Spring Data repository abstraction has allowed execution of query methods and flexible predicates via Querydsl for quite a while. That said, it has been a long requested feature to be able to provide a partially set up domain type instance as probe to the repository to return all entities that match that particular probe. Hopper introduces general support for this query-by-example mechanism in Spring Data Commons as well as implementations of the API in the JPA and MongoDB modules (more to come).&lt;/p&gt;
+&lt;p&gt;The query-by-example API consists of four fundamental parts:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;A probe instance which is an instance of the domain model with fields only partially populated.&lt;/li&gt;
+  &lt;li&gt;An optional &lt;code&gt;ExampleMatcher&lt;/code&gt; which carries details and strategies on how to match particular fields, &lt;code&gt;null&lt;/code&gt;-values, &lt;code&gt;String&lt;/code&gt;s in general etc.&lt;/li&gt;
+  &lt;li&gt;An &lt;code&gt;Example&lt;/code&gt;, which consists of the probe and the &lt;code&gt;ExampleMatcher&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;The &lt;code&gt;QueryByExampleExecutor&lt;/code&gt; interface which your repository would additionally implement and which provides methods taking &lt;code&gt;Example&lt;/code&gt;s similarly to the &lt;code&gt;QueryDslPredicateExecutor&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In the most trivial case it is enough to set the values you want to query for on the domain type and hand that example to the repository.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;interface PersonRepository extends CrudRepository&amp;lt;Person, Long&amp;gt;,&#xD;
+  QueryByExampleExecutor&amp;lt;Person&amp;gt; { … }&#xD;
+&#xD;
+Example&amp;lt;Person&amp;gt; example = Example.of(new Person(&amp;quot;Jon&amp;quot;, &amp;quot;Snow&amp;quot;));&#xD;
+Iterable&amp;lt;Person&amp;gt; result = repository.findAll(example);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;By default, given value are matched as-is, &lt;code&gt;null&lt;/code&gt;-values get ignored during query creation. You can get more control over the matching process by providing an &lt;code&gt;ExampleMatcher&lt;/code&gt; to customize the handling in general or for individual fields.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;ExampleMatcher exampleSpec = new ExampleMatcher()&#xD;
+  .withMatcher(&amp;quot;firstname&amp;quot;, endsWith())&#xD;
+  .withMatcher(&amp;quot;lastname&amp;quot;, startsWith().ignoreCase());
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The above spec creates for eg. JPA in the above sample predicates &lt;code&gt;like(firstname, &amp;quot;%Jon&amp;quot;)&lt;/code&gt; and &lt;code&gt;like(lower(expression), &amp;quot;snow%&amp;quot;)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;There are more options available. So please have a look at the reference documentation for Spring Data &lt;a href="http://docs.spring.io/spring-data/jpa/docs/1.10.x/reference/html/#query-by-example"&gt;JPA&lt;/a&gt; and &lt;a href="http://docs.spring.io/spring-data/mongodb/docs/1.9.x/reference/html/#query-by-example"&gt;MongoDB&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#projections-on-repository-query-methods" class="anchor" name="projections-on-repository-query-methods"&gt;&lt;/a&gt;Projections on repository query methods&lt;/h2&gt;
+&lt;p&gt;The concept of projections Spring Data REST shipped a feature called projections with the &lt;a href="https://spring.io/blog/2014/09/09/spring-data-release-train-evans-goes-ga"&gt;Evans release&lt;/a&gt; train. With Hopper we added support to JPA and MongoDB query methods to use projections on the repository level. A projection is a customized view of your domain model, in this case, returned from a query method.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Entity&#xD;
+public class Person {&#xD;
+&#xD;
+  @Id @GeneratedValue&#xD;
+  private Long id;&#xD;
+  private String firstName, lastName;&#xD;
+&#xD;
+  @OneToOne&#xD;
+  private Address address;&#xD;
+}&#xD;
+&#xD;
+@Entity&#xD;
+public class Address {&#xD;
+&#xD;
+  @Id @GeneratedValue&#xD;
+  private Long id;&#xD;
+  private String street, state, country;&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Limiting data exposure for &lt;code&gt;Person&lt;/code&gt; to &lt;code&gt;firstName&lt;/code&gt; and &lt;code&gt;lastName&lt;/code&gt; require an dedicated DTO class. Using projections you simply define an interface with the properties (getter methods) you want to expose and use the projection interface as return type of your query method:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;interface NoAddresses {&#xD;
+&#xD;
+  String getFirstName();&#xD;
+&#xD;
+  String getLastName();&#xD;
+}&#xD;
+&#xD;
+interface PersonRepository extends CrudRepository&amp;lt;Person, Long&amp;gt; {&#xD;
+  NoAddresses findByFirstName(String firstName);&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Projections are a powerful pattern constructing adjusted views from existing models. &lt;code&gt;NoAddresses&lt;/code&gt; is a closed projection as it doesn&amp;rsquo;t contain any methods dynamically calculating values (see more on that below). Closed projections allow us to optimize the query execution as only exposed properties are queried from the data store. So in the above case the query actually executed would be semantically equivalent to &lt;code&gt;select u.firstName, u.lastName from User u where u.firstName = ?1&lt;/code&gt;. The returned tuples are then wrapped into a proxy that returns the values corresponding to accessors declared.&lt;/p&gt;
+&lt;p&gt;However, projections can also be used for enriching a data model. You can annotate exposed properties with &lt;code&gt;@Value&lt;/code&gt; using SpEL expressions to expose synthetic properties.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;interface FullNameAndCountry {&#xD;
+&#xD;
+  String getFirstName();&#xD;
+&#xD;
+  String getLastName();&#xD;
+&#xD;
+  @Value(&amp;quot;#{target.firstName} #{target.lastName}&amp;quot;)&#xD;
+  String getFullName();&#xD;
+&#xD;
+  @Value(&amp;quot;#{target.address.country}&amp;quot;)&#xD;
+  String getCountry();&#xD;
+&#xD;
+  @Value(&amp;quot;#{@mybean.someMethod(target)}&amp;quot;)&#xD;
+  String getSomeCalculatedValue()&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note, how we can make use of properties of the target instance, traverse nested properties not even exposed at the top level or even invoke methods on other Spring beans and hand over the target to it for use in advanced calculations. In this case, no query optimizations are applied as the proxy created for that interface will require access to the original target instance.&lt;/p&gt;
+&lt;p&gt;Please refer to the &lt;a href="http://docs.spring.io/spring-data/jpa/docs/1.10.1.RELEASE/reference/html/#projections"&gt;Spring Data JPA&lt;/a&gt; and &lt;a href="http://docs.spring.io/spring-data/mongodb/docs/1.9.1.RELEASE/reference/html/#projections"&gt;Spring Data MongoDB&lt;/a&gt; reference documentation for more details in depth how to use projections with query methods.&lt;/p&gt;&lt;h2&gt;&lt;a href="#redis-cluster" class="anchor" name="redis-cluster"&gt;&lt;/a&gt;Redis Cluster&lt;/h2&gt;
+&lt;p&gt;Support for Redis Cluster provides a high level API on top of the existing Redis drivers having cluster features. Cluster support is based on the very same building blocks as non-clustered communication. &lt;code&gt;RedisClusterConnection&lt;/code&gt; — an extension to &lt;code&gt;RedisConnection&lt;/code&gt; — handles the communication with the Redis Cluster and translates errors into Spring&amp;rsquo;s &lt;code&gt;DataAccessException&lt;/code&gt; hierarchy. You see there&amp;rsquo;s no big difference to what you are already used to when working with Spring Data Redis.&lt;/p&gt;
+&lt;p&gt;Redis Cluster behaves different from single node Redis or even a Sentinel monitored master slave environment. This is caused by the automatic sharding that maps a key to one of 16384 slots which are distributed across the nodes. Therefore, commands that involve more than one key must assert that all keys map to the exact same slot in order to avoid cross slot execution errors.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;RedisClusterConnection&lt;/code&gt; offers both an API to talk to a single slot or node but retains expected behavior when interacting with the cluster. It takes care of executing commands that involve more than one key, slot or cluster node and therefore connects to the required nodes and collects results so that eg the &lt;code&gt;KEYS&lt;/code&gt; command not only returns the matching keys of one single node but the cumulated list of all matching keys within the cluster.&lt;/p&gt;
+&lt;p&gt;More information and a complete sample how to setup Spring Data Redis to work with a cluster can be found in the &lt;a href="https://github.com/spring-projects/spring-data-examples/tree/master/redis/cluster"&gt;Redis Cluster module&lt;/a&gt; of the Spring Data Examples GitHub repository as well as the &lt;a href="http://docs.spring.io/spring-data/redis/docs/current/reference/html/#cluster"&gt;reference documentation&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#redis-repositories" class="anchor" name="redis-repositories"&gt;&lt;/a&gt;Redis Repositories&lt;/h2&gt;
+&lt;p&gt;With Redis repositories, Hopper ships an implementation of the Spring Data repositories abstraction on top of Redis so that you can execute basic CRUD operations and execute derived query methods. It allows you to seamlessly convert and store domain objects into Redis Hashes, apply custom mapping strategies and make use of secondary indexes. Let&amp;rsquo;s have a look at an example domain type, a repository and the necessary Spring configuration to get Redis repositories bootstrapped.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@RedisHash(&amp;quot;persons&amp;quot;)&#xD;
+class Person {&#xD;
+&#xD;
+  @Id String id;&#xD;
+  String firstname;&#xD;
+  @Indexed String lastname;&#xD;
+  Address address;&#xD;
+}&#xD;
+&#xD;
+interface PersonRepository extends CrudRepository&amp;lt;Person, String&amp;gt; {&#xD;
+  List&amp;lt;Person&amp;gt; findByLastname(String lastname);&#xD;
+}&#xD;
+&#xD;
+@Configuration&#xD;
+@EnableRedisRepositories&#xD;
+class ApplicationConfig {&#xD;
+&#xD;
+  @Bean&#xD;
+  RedisConnectionFactory connectionFactory() {&#xD;
+    return new JedisConnectionFactory();&#xD;
+  }&#xD;
+&#xD;
+  @Bean&#xD;
+  RedisTemplate&amp;lt;?, ?&amp;gt; redisTemplate() {&#xD;
+    return new RedisTemplate&amp;lt;byte[], byte[]&amp;gt;(connectionFactory());&#xD;
+  }&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that the &lt;code&gt;@Indexed&lt;/code&gt; annotation used on &lt;code&gt;firstname&lt;/code&gt; allows the usage of the property within the derived query method. This also works on nested or embedded objects. For more information about custom Object mapping strategies, expiration times and listeners as well as storing object references please refer to the &lt;a href="http://docs.spring.io/spring-data/redis/docs/1.7.x/reference/html/#redis.repositories"&gt;Spring Data Redis reference documentation&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#spring-data-rest" class="anchor" name="spring-data-rest"&gt;&lt;/a&gt;Spring Data REST&lt;/h2&gt;
+&lt;p&gt;A common request for Spring Data REST was to use the value of a unique property of an aggregate to make up the URI for the item resource exposed. Imagine a very simple entity &lt;code&gt;Country&lt;/code&gt; for which you&amp;rsquo;d like to its unique name in the URI.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Entity&#xD;
+class Country {&#xD;
+&#xD;
+  @Id @GeneratedValue&#xD;
+  private Long id;&#xD;
+  private String name;&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To make this work, Spring Data REST&amp;rsquo;s &lt;code&gt;RepositoryRestConfiguration&lt;/code&gt; now allows to customize the entity lookup via dedicated API. Using a different property for the URI requires to define two things actually: the property to use and a query method on the repository to map a value of that property back to an instance of it. If you&amp;rsquo;re using Java 8, the registration looks as simple as this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Component&#xD;
+public class SpringDataRestCustomization extends RepositoryRestConfigurerAdapter {&#xD;
+&#xD;
+  @Override&#xD;
+  public void configureRepositoryRestConfiguration(&#xD;
+    RepositoryRestConfiguration config) {&#xD;
+&#xD;
+    config.withCustomEntityLookup().&#xD;
+      forRepository(CountryRepository.class,&#xD;
+        Country::getName, CountryRepository::findByName);&#xD;
+  }&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As you can see we use method handles here to define both the mapping step back and forth to be picked up by the infrastructure. Of course, there&amp;rsquo;s an alternative overload for the method shown here to work on Java 6 as well. For details on this, make sure you check out the &lt;a href="https://github.com/spring-projects/spring-data-examples/tree/master/rest/uri-customization"&gt;example dedicated to this on GitHub&lt;/a&gt;.&lt;/p&gt;&lt;h3&gt;&lt;a href="#lookup-types" class="anchor" name="lookup-types"&gt;&lt;/a&gt;Lookup types&lt;/h3&gt;
+&lt;p&gt;Very often, domain models contain types that are value objects but actually represent a particular value out of a dedicated set of possible values. The &lt;code&gt;Country&lt;/code&gt; class of the example above actually falls into that category. Because we need to manage the super set of values, there&amp;rsquo;s a repository in place. If it should be allowed to manage the set via REST as well, the repository needs to be exported, too. As repositories usually indicate an aggregate being managed, Spring Data REST&amp;rsquo;s default way of handling that scenario would be to render links to an association resource wherever a &lt;code&gt;Country&lt;/code&gt; instance is encountered. The Hopper release train adds means to declare so called lookup types, for which Spring Data REST then renders an individual property inlined in the representation and also registers the according Jackson Deserializer to make sure that that property value gets translated back into an instance of that value type for &lt;code&gt;PUT&lt;/code&gt; and &lt;code&gt;POST&lt;/code&gt; requests.&lt;/p&gt;
+&lt;p&gt;Assume the original representation of a resource containing a &lt;code&gt;Country&lt;/code&gt; instance:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint json"&gt;{&#xD;
+  &amp;quot;zipCode&amp;quot; : &amp;quot;…&amp;quot;,&#xD;
+  &amp;quot;_links&amp;quot; {&#xD;
+    &amp;quot;country&amp;quot; : { &amp;quot;href&amp;quot; : &amp;quot;…&amp;quot; }&#xD;
+  }&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you now go ahead and register &lt;code&gt;Country&lt;/code&gt; as lookup type like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Component&#xD;
+public class SpringDataRestCustomization extends RepositoryRestConfigurerAdapter {&#xD;
+&#xD;
+  @Override&#xD;
+  public void configureRepositoryRestConfiguration(&#xD;
+    RepositoryRestConfiguration config) {&#xD;
+&#xD;
+    config.withCustomEntityLookup().&#xD;
+      forLookupRepository(CountryRepository.class).&#xD;
+      withIdMapping(Country::getName).&#xD;
+      withLookup(CountryRepository::findByName);&#xD;
+  }&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;the representation will change to this but still maintain entity semantics in the model:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint json"&gt;{&#xD;
+  &amp;quot;zipCode&amp;quot; : &amp;quot;…&amp;quot;,&#xD;
+  &amp;quot;country&amp;quot; : &amp;quot;Germany&amp;quot;&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;&lt;a href="#composable-annotations" class="anchor" name="composable-annotations"&gt;&lt;/a&gt;Composable annotations&lt;/h2&gt;
+&lt;p&gt;The upgrade to Spring 4.2 as framework baseline allows us to provide enhanced options of composing your own annotations. We added the base infrastructure to the Spring Data Commons module and tweaked the implementations for JPA, MongoDB and Redis to allow you to make use of those changes.&lt;/p&gt;
+&lt;p&gt;Assume you&amp;rsquo;re using the Spring Data JPA annotations &lt;code&gt;@Modifying&lt;/code&gt; and &lt;code&gt;@Query&lt;/code&gt; together in a lot of places like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Modifying&#xD;
+@Query(&amp;quot;update #{#entityName} u set u.active = ?1 where u.id in ?2&amp;quot;)&#xD;
+void updateUserActiveState(boolean activeState, Integer... ids);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Modifying&#xD;
+@Query&#xD;
+@Retention(RetentionPolicy.RUNTIME)&#xD;
+public @interface ModifyingQuery {&#xD;
+&#xD;
+  @AliasFor(annotation = Query.class, attribute = &amp;quot;value&amp;quot;)&#xD;
+  public String query();&#xD;
+}&#xD;
+&#xD;
+@ModifyingQuery(query =&#xD;
+  &amp;quot;update #{#entityName} u set u.active = ?1 where u.id in ?2&amp;quot;)&#xD;
+void updateUserActiveState(boolean activeState, Integer... ids);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Or just have a little fun and translate existing annotations into your &lt;a href="https://github.com/sbrannen/spring-polyglot"&gt;favorite language&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The Spring Data team is coming to Las Vegas! Be sure to join us for a lot of sessions on Spring Data at this year&amp;rsquo;s SpringOne Platform. The first batch of featured talks has already been &lt;a href="http://springoneplatform.io/sessions"&gt;published&lt;/a&gt; on the event&amp;rsquo;s website. Be sure to &lt;a href="https://2016.event.springoneplatform.io/register"&gt;register&lt;/a&gt; to learn about the latest and greatest in Spring Data, the Spring Framework ecosystem in general as well as everything related to CloudFoundry.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Data Geode 1.0.0.APACHE-GEODE-INCUBATING-M2 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/04/29/spring-data-geode-1-0-0-apache-geode-incubating-m2-released" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>John Blum</name>
+    </author>
+    <id>tag:spring.io,2016-04-29:2483</id>
+    <updated>2016-04-29T23:31:00Z</updated>
+    <content type="html">&lt;p&gt;I am pleased to announce the release of &lt;em&gt;Spring Data Geode&lt;/em&gt; 1.0.0.APACHE-GEODE-INCUBATING-M2, offering support for the recently &lt;a href="http://markmail.org/message/v6obupp2ruicnahd"&gt;announced&lt;/a&gt; &lt;em&gt;Apache Geode&lt;/em&gt; 1.0.0-incubating.M2 release.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Spring Data Geode&lt;/em&gt; is a specific version of &lt;em&gt;Spring Data GemFire&lt;/em&gt; with support for &lt;a href="http://geode.incubator.apache.org/"&gt;Apache Geode&lt;/a&gt; rather than &lt;a href="https://pivotal.io/big-data/pivotal-gemfire"&gt;Pivotal GemFire&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Both &lt;em&gt;Spring Data GemFire&lt;/em&gt; and &lt;em&gt;Spring Data Geode&lt;/em&gt; are based on the same &lt;a href="https://github.com/spring-projects/spring-data-gemfire"&gt;source repository in GitHub&lt;/a&gt;, however, Apache Geode support lives in the &lt;a href="https://github.com/spring-projects/spring-data-gemfire/tree/apache-geode"&gt;apache-geode&lt;/a&gt; branch. Therefore, you won&amp;rsquo;t find a separate &lt;a href="http://projects.spring.io/spring-data/"&gt;Spring Data project&lt;/a&gt; specifically for Apache Geode, but this is of little consequence since your existing knowledge of Pivotal GemFire combined with &lt;em&gt;Spring Data GemFire&lt;/em&gt; will be immediately useful and transferable to &lt;em&gt;Apache Geode&lt;/em&gt; and &lt;em&gt;Spring Data Geode&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Last year I wrote a &lt;a href="https://spring.io/blog/2015/06/12/spring-data-gemfire-supports-apache-geode"&gt;blog post&lt;/a&gt; detailing &lt;em&gt;Spring Data GemFire&amp;rsquo;s&lt;/em&gt; support of Apache Geode. However, many things have changed since then.&lt;/p&gt;
+&lt;p&gt;First and foremost, the &lt;em&gt;Spring Data GemFire&lt;/em&gt;, Apache Geode support now has a separate artifact, &lt;code&gt;spring-data-geode&lt;/code&gt;. Additionally, I have opted for a more logical and intuitive version number, &lt;code&gt;1.0.0.APACHE-GEODE-INCUBATING-M2&lt;/code&gt;. And finally, the new artifact/version is even available in &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Cspring-data-geode"&gt;Maven Central&lt;/a&gt; now, like &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Cgeode"&gt;Apache Geode&lt;/a&gt; itself. Yay!&lt;/p&gt;
+&lt;p&gt;So, a developer need only declare the following dependency in her Maven POM or &lt;code&gt;build.gradle&lt;/code&gt; file to start developing Apache Geode applications with &lt;em&gt;Spring&lt;/em&gt;&amp;hellip;&lt;/p&gt;&lt;h4&gt;&lt;a href="#maven-pom" class="anchor" name="maven-pom"&gt;&lt;/a&gt;// Maven POM&lt;/h4&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;&amp;lt;dependency&amp;gt;&#xD;
+    &amp;lt;groupId&amp;gt;org.springframework.data&amp;lt;/groupId&amp;gt;&#xD;
+    &amp;lt;artifactId&amp;gt;spring-data-geode&amp;lt;/artifactId&amp;gt;&#xD;
+    &amp;lt;version&amp;gt;1.0.0.APACHE-GEODE-INCUBATING-M2&amp;lt;/version&amp;gt;&#xD;
+&amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h4&gt;&lt;a href="#build-gradle" class="anchor" name="build-gradle"&gt;&lt;/a&gt;// build.gradle&lt;/h4&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;dependencies {&#xD;
+    compile &amp;#39;org.springframework.data:spring-data-geode:1.0.0.APACHE-GEODE-INCUBATING-M2&amp;#39;&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The separate artifact will help users more easily distinguish the support for Apache Geode from the long-time support of Pivotal GemFire using &lt;em&gt;Spring Data GemFire&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The version number (&lt;code&gt;1.0.0&lt;/code&gt;) along with the version qualifier (&lt;code&gt;APACHE-GEODE-INCUBATING-M2&lt;/code&gt;) not only indicates the level of maturity for both &lt;em&gt;Spring Data Geode&lt;/em&gt; and Apache Geode, but correspond to one another and also indicates what &lt;a href="http://geode.incubator.apache.org/releases/"&gt;release version&lt;/a&gt; of Apache Geode is being supported.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-rsquo-s-new" class="anchor" name="what-rsquo-s-new"&gt;&lt;/a&gt;What&amp;rsquo;s New?&lt;/h2&gt;
+&lt;p&gt;This release includes support for &lt;em&gt;Apache Geode&amp;rsquo;s&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://cwiki.apache.org/confluence/display/GEODE/Off-Heap+Memory"&gt;Off-Heap Memory&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://geode.docs.pivotal.io/docs/developing/continuous_querying/chapter_overview.html"&gt;Continuous Queries (CQ)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Multi-site &lt;a href="http://geode.docs.pivotal.io/docs/topologies_and_comm/multi_site_configuration/chapter_overview.html"&gt;WAN&lt;/a&gt; topology configuration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;More information about Apache Geode can be found on the &lt;a href="http://geode.incubator.apache.org/"&gt;website&lt;/a&gt;. Please refer to the &lt;em&gt;Spring Data GemFire&lt;/em&gt; &lt;a href="http://projects.spring.io/spring-data-gemfire/"&gt;project page&lt;/a&gt; along with the &lt;a href="http://docs.spring.io/spring-data-gemfire/docs/1.8.1.RELEASE/reference/html"&gt;reference guide&lt;/a&gt; on how to effectively build &lt;em&gt;Spring&lt;/em&gt; applications using Apache Geode.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-rsquo-s-next" class="anchor" name="what-rsquo-s-next"&gt;&lt;/a&gt;What&amp;rsquo;s Next?&lt;/h2&gt;
+&lt;p&gt;I plan to finish the &lt;em&gt;Spring Boot&lt;/em&gt; &lt;a href="https://github.com/spring-projects/spring-boot/pull/5445"&gt;Starter&lt;/a&gt; for Apache Geode along with &lt;em&gt;Spring Session&lt;/em&gt; &lt;a href="https://github.com/spring-projects/spring-session/pull/366"&gt;support&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I also have ideas on how to improve the user experience when configuring either Pivotal GemFire or Apache Geode using &lt;em&gt;Spring&lt;/em&gt; &lt;a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/#beans-java"&gt;Java-based configuration&lt;/a&gt;. You can track my progress on this effort in &lt;a href="https://jira.spring.io/browse/SGF-492"&gt;SGF-492&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As always, feedback or help is greatly appreciated.&lt;/p&gt;
+&lt;p&gt;Happy coding my friends!&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Cloud Data Flow 1.0.0 M3 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/04/29/spring-cloud-data-flow-1-0-0-m3-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Mark Fisher</name>
+    </author>
+    <id>tag:spring.io,2016-04-29:2487</id>
+    <updated>2016-04-29T19:54:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team, I am pleased to announce the 1.0.0.M3 release of &lt;a target="_blank" href="http://cloud.spring.io/spring-cloud-dataflow/"&gt;Spring Cloud Data Flow&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Over the last few months, we have added exciting new features and improvements to the overall orchestration of data microservices on a variety of platforms. We have also made some changes that significantly benefit developers, such as exposing &lt;a target="_blank" href="http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot-starter-poms"&gt;Spring Boot Starters&lt;/a&gt; for all of the &lt;a target="_blank" href="https://github.com/spring-cloud/spring-cloud-stream-app-starters"&gt;stream&lt;/a&gt; and &lt;a target="_blank" href="https://github.com/spring-cloud/spring-cloud-task-app-starters"&gt;task&lt;/a&gt; applications we publish. Following are some of the highlights from this release:&lt;/p&gt;
+&lt;div class="ulist"&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Provides the foundation for the following Data Flow Server implementations that have also been released today:&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&#xD;
+Spring Cloud Data Flow’s &lt;a target="_blank" href="https://spring.io/blog/2016/04/29/spring-cloud-data-flow-for-cloud-foundry-1-0-0-m2-released"&gt;Cloud Foundry Server&lt;/a&gt; 1.0.0.M2&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Spring Cloud Data Flow’s &lt;a target="_blank" href="https://spring.io/blog/2016/04/29/spring-cloud-data-flow-for-apache-mesos-and-kubernetes-1-0-0-m2-versions-released"&gt;Kubernetes Server&lt;/a&gt; 1.0.0.M2&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Spring Cloud Data Flow’s &lt;a target="_blank" href="https://spring.io/blog/2016/04/29/spring-cloud-data-flow-for-apache-yarn-1-0-0-m2-released"&gt;Apache YARN Server&lt;/a&gt; 1.0.0.M2&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Spring Cloud Data Flow’s &lt;a target="_blank" href="https://spring.io/blog/2016/04/29/spring-cloud-data-flow-for-apache-mesos-and-kubernetes-1-0-0-m2-versions-released"&gt;Apache Mesos Server&lt;/a&gt; 1.0.0.M2&#xD;
+&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/li&gt;&#xD;
+&#xD;
+&lt;li&gt;&#xD;
+Introduces and builds upon the &lt;a target="_blank" href="https://github.com/spring-cloud/spring-cloud-deployer"&gt;Spring Cloud Deployer&lt;/a&gt; Service Provider Interface&#xD;
+&lt;/li&gt;&#xD;
+&lt;div class="ulist"&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&#xD;
+New multi-platform application deployment model factored out of Spring Cloud Data Flow itself for general purpose use, including &lt;a target="_blank" href="https://github.com/spring-cloud/spring-cloud-deployer/blob/master/spring-cloud-deployer-spi/src/main/java/org/springframework/cloud/deployer/spi/app/AppDeployer.java"&gt;AppDeployer&lt;/a&gt; and &lt;a target="_blank" href="https://github.com/spring-cloud/spring-cloud-deployer/blob/master/spring-cloud-deployer-spi/src/main/java/org/springframework/cloud/deployer/spi/task/TaskLauncher.java"&gt;TaskLauncher&lt;/a&gt; to deploy long-running and short-lived microservices, respectively. &#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Improved application resolution strategy with support for maintaining a registry of applications as &lt;code&gt;http&lt;/code&gt;, &lt;code&gt;file&lt;/code&gt;, &lt;code&gt;maven&lt;/code&gt;, &lt;code&gt;docker&lt;/code&gt;, or &lt;code&gt;hdfs&lt;/code&gt; artifacts&#xD;
+&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/div&gt;&#xD;
+&#xD;
+&lt;li&gt;&#xD;
+Builds upon &lt;a target="_blank" href="http://cloud.spring.io/spring-cloud-stream"&gt;Spring Cloud Stream&lt;/a&gt; 1.0.0.RC3 &#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Builds upon &lt;a target="_blank" href="https://spring.io/blog/2016/04/29/spring-cloud-task-1-0-0-m2-is-now-available"&gt;Spring Cloud Task&lt;/a&gt; 1.0.0.M2&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Improves DSL support for streaming and batch pipelines&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Adds "tap" support for streaming and batch pipelines&#xD;
+&lt;/li&gt;&#xD;
+&#xD;
+&lt;li&gt;&#xD;
+Applications&#xD;
+&lt;/li&gt;&#xD;
+&lt;div class="ulist"&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&#xD;
+Supports out-of-the-box stream applications built from the new &lt;a target="_blank" href="https://github.com/spring-cloud/spring-cloud-stream-app-starters"&gt;Stream Application Starters&lt;/a&gt; project (auto-generated apps for both Kafka and RabbitMQ binders)&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Supports out-of-the-box task applications built from the new &lt;a target="_blank" href="https://github.com/spring-cloud/spring-cloud-task-app-starters"&gt;Task Application Starters&lt;/a&gt; project&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Adds several new out-of-the-box stream and task applications&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Improves custom application registration mechanics from the Shell and Dashboard&#xD;
+&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/div&gt;&#xD;
+&#xD;
+&lt;li&gt;&#xD;
+Dashboard&#xD;
+&lt;/li&gt;&#xD;
+&lt;div class="ulist"&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&#xD;
+New and improved Dashboard&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Adds Batch and Task support&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Adds "Apps" tab to &lt;a target="_blank" href="https://github.com/spring-cloud/spring-cloud-dataflow/blob/master/spring-cloud-dataflow-docs/src/main/asciidoc/images/dataflow-available-apps-list.png"&gt;monitor and manage&lt;/a&gt; out-of-the-box and custom applications&#xD;
+&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;li&gt;&#xD;
+&lt;a target="_blank" href="https://network.pivotal.io/products/p-flo-for-spring-cloud-data-flow"&gt;Flo for Spring Cloud Data Flow&lt;/a&gt;&#xD;
+&lt;/li&gt;&#xD;
+&lt;div class="ulist"&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&#xD;
+Modern look and feel with several UX improvements around the palette, auto-layouts, auto-linking, canvas, nodes, node connectors, and many more&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Adds support for a scriptable-transform processor that accepts ruby, groovy, python, or javascript code for runtime compute logic&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Adds visual distinction between primary and tap’d pipelines&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Adapts to Angular style tooltips&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Graph layout optimizations &#xD;
+&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;iframe width="420" height="315" src="https://www.youtube.com/embed/78CgV46OstI" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&#xD;
+&lt;li&gt;&#xD;
+&#xD;
+&#xD;
+Improved IT and TCK tests&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+Adds new &lt;a target="_blank" href="https://github.com/spring-cloud/spring-cloud-dataflow-samples"&gt;samples&lt;/a&gt;&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+ Adds new &lt;a target="_blank" href="http://cloud.spring.io/spring-cloud-dataflow/"&gt;logo&lt;/a&gt;&#xD;
+&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/div&gt;
+&lt;p&gt;For the complete list of features, bug-fixes, and improvements, please refer to the closed &lt;a target="_blank" href="https://github.com/spring-cloud/spring-cloud-dataflow/issues?q=milestone:1.0.0.M3"&gt;1.0.0.M3&lt;/a&gt; GitHub issues.&lt;/p&gt;
+&lt;p&gt;We welcome feedback and contributions! If you have any questions, comments or suggestions, please let us know via &lt;a target="_blank" href="https://github.com/spring-cloud/spring-cloud-dataflow/issues"&gt;GitHub Issues&lt;/a&gt;, &lt;a target="_blank" href="http://stackoverflow.com/tags/spring-cloud-dataflow"&gt;StackOverflow&lt;/a&gt;, or using the #SpringCloudDataFlow hashtag on Twitter.&lt;/p&gt;
+&lt;p&gt;We have aggressive plans for the upcoming RC release. Stay tuned!&lt;/p&gt;
+&lt;p&gt;Last but not least&amp;hellip; check out this &lt;a href="http://pivotal.io/spring-app-framework"&gt;brand new website&lt;/a&gt; to learn how Spring Accelerates Cloud Native Java Application Development!&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Cloud Data Flow for Cloud Foundry 1.0.0.M2 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/04/29/spring-cloud-data-flow-for-cloud-foundry-1-0-0-m2-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Eric Bottard</name>
+    </author>
+    <id>tag:spring.io,2016-04-29:2484</id>
+    <updated>2016-04-29T18:26:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the Spring Cloud Data Flow team, I am pleased to announce the 1.0.0.M2 release of Spring Cloud Data Flow for Cloud Foundry.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow-server-cloudfoundry"&gt;Spring Cloud Data Flow for Cloud Foundry&lt;/a&gt; allows one to use all the goodness of &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow"&gt;Spring Cloud Data Flow&lt;/a&gt; (like the Shell, UI and &lt;a href="https://network.pivotal.io/products/p-flo-for-spring-cloud-data-flow"&gt;Flo&lt;/a&gt;) while targeting Cloud Foundry as a backend. Stream components are deployed as individual apps in Cloud Foundry, leveraging the power of the platform to handle scaling and health monitoring.&lt;/p&gt;
+&lt;p&gt;This second milestone&lt;br/&gt;- builds upon the 1.0.0.M1 release of &lt;a href="https://github.com/spring-cloud/spring-cloud-deployer-cloudfoundry"&gt;Cloud Foundry implementation&lt;/a&gt; of spring-cloud-deployer&lt;br/&gt;- builds upon the 1.0.0.M3 release of Spring Cloud Data Flow&lt;br/&gt;- builds upon the 2.0.0.M4 release of the &lt;a href="https://github.com/cloudfoundry/cf-java-client"&gt;Cloud Foundry java client&lt;/a&gt;, leveraging its reactive programming style &lt;/p&gt;
+&lt;p&gt;In addition to being written from the ground up using the new &lt;a href="https://github.com/spring-cloud/spring-cloud-deployer"&gt;Spring Cloud Deployer&lt;/a&gt; abstraction for Cloud Foundry, this release improves logging and error handling for stream deployments in Cloud Foundry. It also introduces asynchronous deployment of apps, providing a better user experience in the Shell, UI and Flo.&lt;/p&gt;
+&lt;p&gt;Future work will focus on support to run short-lived tasks in Cloud Foundry, which may be any process that does not run indefinitely, including Spring Batch jobs&lt;/p&gt;
+&lt;p&gt;For a complete list of changes and improvements, please refer to &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow-server-cloudfoundry/issues?q=milestone%3A1.0.0.M2+is%3Aclosed"&gt;1.0.0.M2 release&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Cloud Data Flow for Apache Mesos and Kubernetes 1.0.0.M2 versions released</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/04/29/spring-cloud-data-flow-for-apache-mesos-and-kubernetes-1-0-0-m2-versions-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Thomas Risberg</name>
+    </author>
+    <id>tag:spring.io,2016-04-29:2488</id>
+    <updated>2016-04-29T18:22:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team, I am pleased to announce 1.0.0.M2 releases of Spring Cloud Data Flow for Apache Mesos and Spring Cloud Data Flow for Kubernetes.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow-server-mesos"&gt;Spring Cloud Data Flow for Apache Mesos&lt;/a&gt; allows one to use all the goodness of &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow"&gt;Spring Cloud Data Flow&lt;/a&gt; (like the Shell, UI and &lt;a href="https://network.pivotal.io/products/p-flo-for-spring-cloud-data-flow"&gt;Flo&lt;/a&gt;) while targeting Apache Mesos as a backend. Stream components are deployed as individual apps using Marathon, leveraging the power of the platform to handle scaling and health monitoring.&lt;/p&gt;
+&lt;p&gt;This second milestone&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Builds upon 1.0.0.M1 release of the &lt;a href="https://github.com/spring-cloud/spring-cloud-deployer-mesos"&gt;Spring Cloud Deployer Mesos/Marathon implementation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Builds upon 1.0.0.M3 release of Spring Cloud Data Flow&lt;/li&gt;
+  &lt;li&gt;Replaces spring-cloud-marathon-connector with environment variables for service connection parameters. We will improve the service discovery in future release and tie in to Mesos/Marathon’s native service discovery mechanism for runtime credentials&lt;/li&gt;
+  &lt;li&gt;Adds support to resolve, register, and run OOTB and custom apps as docker images&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For a complete list of changes and improvements, please refer to &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow-server-mesos/issues?q=milestone%3A1.0.0.M2"&gt;Spring Cloud Data Flow for Apache Mesos 1.0.0.M2 release&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow-server-kubernetes"&gt;Spring Cloud Data Flow forKubernetes&lt;/a&gt; allows one to use all the goodness of &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow"&gt;Spring Cloud Data Flow&lt;/a&gt; (like the Shell, UI and &lt;a href="https://network.pivotal.io/products/p-flo-for-spring-cloud-data-flow"&gt;Flo&lt;/a&gt;) while targeting Kubernetes as a backend. Stream components are deployed as individual apps using Kubernetes, leveraging the power of the platform to handle scaling and health monitoring.&lt;/p&gt;
+&lt;p&gt;This second milestone&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Builds upon 1.0.0.M1 release of &lt;a href="https://github.com/spring-cloud/spring-cloud-deployer-kubernetes"&gt;Spring Cloud Deployer Kubernetes implementation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Builds upon 1.0.0.M3 release of Spring Cloud Data Flow&lt;/li&gt;
+  &lt;li&gt;Replaces spring-cloud-kubernetes-connector with environment variables for service connection parameters. We will improve the service discovery in future release and use Kubernetes’ native service discovery mechanism for runtime credentials&lt;/li&gt;
+  &lt;li&gt;Adds support to resolve, register, and run OOTB and custom apps as docker images&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For a complete list of changes and improvements, please refer to &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow-server-kubernetes/issues?q=milestone%3A1.0.0.M2"&gt;Spring Cloud Data Flow Kubernetes 1.0.0.M2 release&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Cloud Data Flow for Apache YARN 1.0.0.M2 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/04/29/spring-cloud-data-flow-for-apache-yarn-1-0-0-m2-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Janne Valkealahti</name>
+    </author>
+    <id>tag:spring.io,2016-04-29:2485</id>
+    <updated>2016-04-29T18:16:39Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the Spring Cloud Data Flow team, I am pleased to announce the 1.0.0.M2 release of Spring Cloud Data Flow for Apache YARN.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow-server-yarn"&gt;Spring Cloud Data Flow for Apache YARN&lt;/a&gt; allows one to use all the goodness of &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow"&gt;Spring Cloud Data Flow&lt;/a&gt; (like the Shell, UI and &lt;a href="https://network.pivotal.io/products/p-flo-for-spring-cloud-data-flow"&gt;Flo&lt;/a&gt;) while targeting Apache YARN as a backend. Stream components are deployed as individual apps in Apache YARN, leveraging the power of the platform to handle scaling and health monitoring.&lt;/p&gt;
+&lt;p&gt;This second milestone&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;builds upon the 1.0.0.M1 release of &lt;a href="https://github.com/spring-cloud/spring-cloud-deployer-yarn"&gt;Spring Cloud YARN Deployer&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;builds upon the 1.0.0.M3 release of Spring Cloud Data Flow.&lt;/li&gt;
+  &lt;li&gt;Adds Spring Cloud Task support to orchestrate short-lived tasks including Spring Batch jobs in a YARN cluster.&lt;/li&gt;
+  &lt;li&gt;Improved IP address discovery for internal coordination.&lt;/li&gt;
+  &lt;li&gt;Adds support to host, resolve and register OOTB apps from HDFS.&lt;/li&gt;
+  &lt;li&gt;Adds installable RPM bits.&lt;/li&gt;
+  &lt;li&gt;Adds Ambari plugin to provision SCDF on YARN.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This release supports running both streams and tasks on YARN. Data Flow YARN server can be either run against existing YARN cluster or automatically installed into Apache Ambari via specific Ambari integration plugin. See details from &lt;a href="http://docs.spring.io/spring-cloud-dataflow-server-yarn/docs/1.0.0.M2/reference/htmlsingle"&gt;Reference Documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://cloud.githubusercontent.com/assets/50398/14921827/12371520-0e2c-11e6-8759-9ce1510b6267.png" alt="ambari-1 0 0 m3-shot3" /&gt;&lt;/p&gt;
+&lt;p&gt;With YARN it&amp;rsquo;s easy to scale streams:&lt;br/&gt;&lt;img src="https://cloud.githubusercontent.com/assets/50398/14921837/1e79d12e-0e2c-11e6-8fbc-4080b62e9e45.png" alt="ambari-1 0 0 m3-shot1" /&gt;&lt;/p&gt;
+&lt;p&gt;For a complete list of changes and improvements, please refer to &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow-server-yarn/issues?q=milestone%3A1.0.0.M2+is%3Aclosed"&gt;1.0.0.M2 release&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Cloud Task 1.0.0.M2 is now available</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/04/29/spring-cloud-task-1-0-0-m2-is-now-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Michael Minella</name>
+    </author>
+    <id>tag:spring.io,2016-04-29:2486</id>
+    <updated>2016-04-29T17:07:56Z</updated>
+    <content type="html">&lt;p&gt;We are pleased to announce the release of &lt;a href="http://cloud.spring.io/spring-cloud-task/"&gt;Spring Cloud Task&lt;/a&gt; 1.0.0.M2. This is the second milestone of the Spring Cloud Task project with some exciting new features!&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-rsquo-s-new" class="anchor" name="what-rsquo-s-new"&gt;&lt;/a&gt;What&amp;rsquo;s New?&lt;/h2&gt;
+&lt;p&gt;With the M1 release of Spring Cloud Task, we introduced the concept of a task, the &lt;code&gt;@EnableTask&lt;/code&gt; annotation, and the general concept of a microservice that has an end. We&amp;rsquo;ve been quite busy since then. Some of the highlights of what is new include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Cloud Task Listeners&lt;/li&gt;
+  &lt;li&gt;Integration with Spring Cloud Stream&lt;/li&gt;
+  &lt;li&gt;Integration with Spring Batch&lt;/li&gt;
+  &lt;li&gt;More samples&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let&amp;rsquo;s take a look at what each of these include.&lt;/p&gt;&lt;h2&gt;&lt;a href="#spring-cloud-task-listeners" class="anchor" name="spring-cloud-task-listeners"&gt;&lt;/a&gt;Spring Cloud Task Listeners&lt;/h2&gt;
+&lt;p&gt;It can be useful to execute logic around a task, before or after (or both). This release introduces both an interface, &lt;code&gt;TaskExecutionListener&lt;/code&gt;, as well as annotations &lt;code&gt;@BeforeTask&lt;/code&gt; and &lt;code&gt;@AfterTask&lt;/code&gt; that allow a user to define logic to be executed either before a task is executed or once it is complete.&lt;/p&gt;&lt;h2&gt;&lt;a href="#integration-with-spring-cloud-stream" class="anchor" name="integration-with-spring-cloud-stream"&gt;&lt;/a&gt;Integration with Spring Cloud Stream&lt;/h2&gt;
+&lt;p&gt;Integrating Spring Cloud Task with &lt;a href="http://cloud.spring.io/spring-cloud-stream/"&gt;Spring Cloud Stream&lt;/a&gt; creates a powerful tool for developers to orchestrate data microservices. In this release of Spring Cloud Task, we have added a few integration points between the two projects.&lt;/p&gt;
+&lt;p&gt;The first integration point is the ability to launch tasks based on messages sent via a stream. By creating a Boot application using the &lt;code&gt;@EnableTaskLauncher&lt;/code&gt; annotation and the correct dependencies, you&amp;rsquo;ll have a Spring Cloud Stream Sink that listens for &lt;code&gt;TaskLaunchRequest&lt;/code&gt; messages. For each message that is received, the launcher sink will launch the requested task.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;@SpringBootApplication&#xD;
+@EnableTaskLauncher&#xD;
+public class TaskSinkApplication {&#xD;
+&#xD;
+	public static void main(String[] args) {&#xD;
+		SpringApplication.run(TaskSinkApplication.class, args);&#xD;
+	}&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As of the writing of this post, launchers for both local and Apache YARN are both available with CloudFoundry, Apache Mesos, and Kubernetes all currently in development.&lt;/p&gt;
+&lt;p&gt;The other integration point between Spring Cloud Task and Spring Cloud Stream is the ability for Spring Cloud Task to publish events to Spring Cloud Stream channels. Including the &lt;code&gt;spring-cloud-task-stream&lt;/code&gt; dependency (as well as a Spring Cloud Stream binder of your choice) added to your project, the task will automatically emit messages both on the start and end of your task. Specifically, the task will emit the &lt;code&gt;TaskExecution&lt;/code&gt; at each of those points allowing upstream applications to be notified when a task is starting as well as when it ends and the result.&lt;/p&gt;&lt;h2&gt;&lt;a href="#integration-with-spring-batch" class="anchor" name="integration-with-spring-batch"&gt;&lt;/a&gt;Integration with Spring Batch&lt;/h2&gt;
+&lt;p&gt;A common use case for using Spring Cloud Task is to run Spring Batch jobs. Because of this, we&amp;rsquo;ve added a couple of interesting integration points between the two projects in a new module &lt;code&gt;spring-cloud-task-batch&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The first integration point is the emission of batch informational messages via Spring Cloud Stream channels. Similar to the functionality provided by Spring XD&amp;rsquo;s containers, a batch job run as a task (with the appropriate dependencies) can emit informational messages with no additional configuration. The following listeners emit events of some kind:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;JobExecutionListener&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;StepExecutionListener&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;ChunkListener&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;ItemReadListener&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;ItemProcessListener&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;ItemWriteListener&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;SkipListener&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The second integration point is a new &lt;code&gt;PartitionHandler&lt;/code&gt;, the &lt;code&gt;DeployerPartitionHandler&lt;/code&gt;. This &lt;code&gt;PartitionHandler&lt;/code&gt; implementation allows workers in a remote partitioning batch job to be launched as tasks instead of being deployed in advance and being required to listen for work. This provides the benefit of having workers only deployed and running when they are doing work and should be shut down and cleaned up once that work is complete. The &lt;code&gt;DeployerPartitionHandler&lt;/code&gt; delegates the launching of tasks to a Spring Cloud Deployer implementation so any deployer impl that supports task launching can be used with this new &lt;code&gt;PartitionHandler&lt;/code&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#more-samples" class="anchor" name="more-samples"&gt;&lt;/a&gt;More Samples&lt;/h2&gt;
+&lt;p&gt;The easiest way to understand how things work is to see them in action. Because of this, we&amp;rsquo;ve beefed up our samples module to provide examples of all of the functionality mentioned here as well as some of the more basic use cases. You can view our new samples on &lt;a href="https://github.com/spring-cloud/spring-cloud-task/tree/master/spring-cloud-task-samples"&gt;Github&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#where-do-we-go-from-here" class="anchor" name="where-do-we-go-from-here"&gt;&lt;/a&gt;Where do we go from here?&lt;/h2&gt;
+&lt;p&gt;We have a bit more work to do before we get our RC release out which should be in line with &lt;a href="http://cloud.spring.io/spring-cloud-dataflow/"&gt;Spring Cloud Data Flow&amp;rsquo;s&lt;/a&gt; related release. We&amp;rsquo;ll be busy working on any final issues within Spring Cloud Task as well as providing whatever else Spring Cloud Data Flow needs.&lt;/p&gt;&lt;h2&gt;&lt;a href="#tell-us-what-you-think" class="anchor" name="tell-us-what-you-think"&gt;&lt;/a&gt;Tell us what you think!&lt;/h2&gt;
+&lt;p&gt;Spring Cloud Task is a new and exciting project that we feel fills an under served area of enterprise development. However, we want to know what you think. Please let us know via the issues in &lt;a href="https://github.com/spring-cloud/spring-cloud-task/issues"&gt;Github Issues&lt;/a&gt; , &lt;a href="http://stackoverflow.com/tags/spring-cloud-task"&gt;StackOverflow&lt;/a&gt;, or directly on &lt;a href="https://twitter.com/michaelminella"&gt;Twitter&lt;/a&gt;!&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring REST Docs 1.1.0.RC1</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/04/28/spring-rest-docs-1-1-0-rc1" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Andy Wilkinson</name>
+    </author>
+    <id>tag:spring.io,2016-04-28:2482</id>
+    <updated>2016-04-28T19:56:35Z</updated>
+    <content type="html">&lt;p&gt;Following &lt;a href="https://spring.io/blog/2016/02/16/spring-rest-docs-1-1-0-m1"&gt;1.1.0.M1&lt;/a&gt;, it&amp;rsquo;s my pleasure to announce that Spring REST Docs 1.1.0.RC1 has been released and is available from &lt;a href="https://repo.spring.io/milestone/"&gt;https://repo.spring.io/milestone/&lt;/a&gt;.&lt;/p&gt;&lt;h1&gt;&lt;a href="#what-rsquo-s-new" class="anchor" name="what-rsquo-s-new"&gt;&lt;/a&gt;What&amp;rsquo;s new?&lt;/h1&gt;&lt;h2&gt;&lt;a href="#httpie-request-snippet" class="anchor" name="httpie-request-snippet"&gt;&lt;/a&gt;HTTPie request snippet&lt;/h2&gt;
+&lt;p&gt;A new &lt;a href="http://httpie.org"&gt;HTTPie&lt;/a&gt; request snippet has been introduced. Similar to the existing curl request snippet, the new snippet contains the HTTPie command for a request. My thanks to &lt;a href="https://github.com/rocketraman"&gt;Raman Gupta&lt;/a&gt; who contributed this new feature.&lt;/p&gt;&lt;h2&gt;&lt;a href="#reusable-snippets" class="anchor" name="reusable-snippets"&gt;&lt;/a&gt;Reusable snippets&lt;/h2&gt;
+&lt;p&gt;Snippets can now be created once with some common configuration and then &lt;a href="http://docs.spring.io/spring-restdocs/docs/1.1.0.RC1/reference/html5/#documenting-your-api-reusing-snippets"&gt;reused&lt;/a&gt;. This reduces repetition when documenting common parts on an API, such as &lt;code&gt;self&lt;/code&gt; links.&lt;/p&gt;&lt;h2&gt;&lt;a href="#relaxed-snippets" class="anchor" name="relaxed-snippets"&gt;&lt;/a&gt;Relaxed snippets&lt;/h2&gt;
+&lt;p&gt;By default, Spring REST Docs will cause your tests to fail if you&amp;rsquo;ve neglected to document something or if you&amp;rsquo;ve attempted to document something that doesn&amp;rsquo;t exist. This is great for detailed API documentation, but can be restrictive when documenting a scenario where you want to focus on a specific part of a request or response. Rather than having to explicitly ignore everything that you don&amp;rsquo;t want to document, you can now use relaxed snippets for documenting links, request and response fields, and request and path parameters.&lt;/p&gt;&lt;h1&gt;&lt;a href="#what-rsquo-s-next" class="anchor" name="what-rsquo-s-next"&gt;&lt;/a&gt;What&amp;rsquo;s next?&lt;/h1&gt;
+&lt;p&gt;We&amp;rsquo;re hoping to publish a release in a few weeks&amp;rsquo; time. Please take the release candidate for a spin and &lt;a href="https://github.com/spring-projects/spring-restdocs/issues/new"&gt;let us know&lt;/a&gt; if you find any problems or if you have a suggestion for some last-minute improvements.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;d like to learn more about Spring REST Docs and test-driven documentation, I&amp;rsquo;ll be speaking about it in May at the &lt;a href="http://www.springio.net/"&gt;Spring/IO conference&lt;/a&gt; in Barcelona. I&amp;rsquo;d love to see you there.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Session 1.2.0 RC3 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/04/28/spring-session-1-2-0-rc3-released" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Rob Winch</name>
+    </author>
+    <id>tag:spring.io,2016-04-28:2481</id>
+    <updated>2016-04-28T12:11:08Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the community, I&amp;rsquo;m pleased to announce the release of Spring Session 1.2.0.RC3. The release can be found in the &lt;a href="https://github.com/spring-projects/spring-framework/wiki/Spring-repository-FAQ#what-repositories-are-available"&gt;Spring Milestone Repository&lt;/a&gt; (&lt;a href="https://repo.spring.io/milestone/)"&gt;https://repo.spring.io/milestone/)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This release contains &lt;a href="https://github.com/spring-projects/spring-session/issues?q=milestone%3A1.2.0.RC3+is%3Aclosed"&gt;some fixes&lt;/a&gt; for the previous release. &lt;/p&gt;
+&lt;p&gt;Some highlights of the issues in this release include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;JDBC Support persists session attributes on a separate table. This was in response to the community feedback (thanks!)&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-session/issues/467"&gt;Redis Session optimization&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Preparations for improved Spring Boot auto configuration&lt;/li&gt;
+  &lt;li&gt;Updated to Spring Data Hopper&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;See &lt;a href="http://docs.spring.io/spring-session/docs/1.2.0.RC3/reference/html5/#what-s-new-in-1-2"&gt;What&amp;rsquo;s New in 1.2&lt;/a&gt; for more details.&lt;/p&gt;&lt;h1&gt;&lt;a href="#our-community-support" class="anchor" name="our-community-support"&gt;&lt;/a&gt;Our Community Support&lt;/h1&gt;
+&lt;p&gt;As always, I&amp;rsquo;d like to thank our awesome community for their contributions. A very big thanks to those who submitted Pull Requests:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-session/pull/471"&gt;#471&lt;/a&gt; - Update to Spring Data Hopper Release Thanks &lt;a href="https://github.com/jxblum"&gt;John Blum&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-session/pull/475"&gt;#475&lt;/a&gt; - Add GitHub Issue and PR templates Thanks &lt;a href="https://github.com/vpavic"&gt;Vedran Pavić&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-session/pull/476"&gt;#476&lt;/a&gt; - Add compile dependency to commons-logging Thanks &lt;a href="https://github.com/vpavic"&gt;Vedran Pavić&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-session/pull/490"&gt;#490&lt;/a&gt; - Add tableName setter for JdbcHttpSessionConfiguration Thanks &lt;a href="https://github.com/eddumelendez"&gt;Eddú Meléndez Gonzales&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-session/pull/492"&gt;#492&lt;/a&gt; - Expose attributes in MongoHttpSessionConfiguration Thanks &lt;a href="https://github.com/eddumelendez"&gt;Eddú Meléndez Gonzales&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-session/pull/494"&gt;#494&lt;/a&gt; - Remove duplicate words Thanks &lt;a href="https://github.com/izeye"&gt;Johnny Lim&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-session/pull/495"&gt;#495&lt;/a&gt; - Implement individual attribute persistence in JdbcOperationsSessionRepository Thanks &lt;a href="https://github.com/vpavic"&gt;Vedran Pavić&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-session/pull/501"&gt;#501&lt;/a&gt; - Set collectionName attribute in MongoOperationsSessionRepository Thanks &lt;a href="https://github.com/eddumelendez"&gt;Eddú Meléndez Gonzales&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We look forward to your feedback and if all goes well plan to release 1.2.0.RELEASE in the next few weeks.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-session/"&gt;Site&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-session/docs/1.2.0.RC2/reference/html5/"&gt;Documentation&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-session/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-session"&gt;Help&lt;/a&gt; &lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Webinar: Data Microservices with Spring Cloud Data Flow</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/04/27/webinar-data-microservices-with-spring-cloud-data-flow" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2016-04-27:2480</id>
+    <updated>2016-04-27T15:40:00Z</updated>
+    <content type="html">&lt;p&gt;Speakers: Mark Fisher &amp;amp; Mark Pollack, Pivotal&lt;br/&gt;The future of scalable data processing is microservices! Building on the ease of development and deployment provided by Spring Boot and the cloud native capabilities of Spring Cloud, the Spring Cloud Stream and Spring Cloud Task projects provide a simple and powerful framework for microservice stream and batch processing.&lt;br/&gt;At a higher level of abstraction, Spring Cloud Data Flow is an integrated orchestration layer that provides a highly productive experience for deploying and managing sophisticated data pipelines consisting of standalone microservices. Streams and tasks are defined using a DSL abstraction and can be managed via shell and a web UI. Furthermore, a pluggable runtime SPI allows Spring Cloud Data Flow to coordinate these applications across a variety of distributed runtime platforms such as Cloud Foundry, Apache Mesos and Apache YARN.&lt;br/&gt;During this webinar you&amp;rsquo;ll see an overview of Spring Cloud Data Flow, with live demos of streaming and batch apps, on different platforms ranging from local cluster to a remote Cloud to show the simplicity of the developer experience.&lt;/p&gt;
+&lt;p&gt;Tuesday, May 24th, 2016 3:00PM London GMT &lt;a href="http://connect.pivotal.io/OSS_Webinar_7AMDataMicroserviceswithSpringCloudDataFlow_Register.html"&gt;Register&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Tuesday, May 24th, 2016 10:00AM PST (San Francisco GMT-08:00) &lt;a href="http://connect.pivotal.io/OSS_Webinar_10AMDataMicroserviceswithSpringCloudDataFlow_Register.html"&gt;Register&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+</feed>
