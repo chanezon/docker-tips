@@ -1,0 +1,9 @@
+web:
+  image: chanezon/spring-doge
+  ports:
+   - "8080:8080"
+  links: ["mongo"]
+  environment:
+   - MONGODB_URI=mongodb://mongo:27017/test
+mongo:
+  image: mongo

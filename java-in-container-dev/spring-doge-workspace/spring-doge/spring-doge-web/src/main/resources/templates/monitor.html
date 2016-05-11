@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Spring Doge: Such Boot!</title>
+		<meta name="description" content="A simple application demonstrating how to use Spring Boot for evil." />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="css/animations.css" />
+		<link rel="stylesheet" href="css/doge.css" />
+	</head>
+	<body>
+		<!--[if lt IE 7]>
+		<p>
+			You are using an <strong>outdated</strong> browser.
+			Please upgrade your browser to improve your experience.
+		</p>
+		<![endif]-->
+
+		<div ng-controller="MonitorController" id="monitor">
+
+			<div id="imgPreview" style="width: 300px;">
+
+				Showing {{size}} upload(s).
+
+				<div ng-repeat="u in uploads">
+					<img class="fadeIn" ng-src="{{u.dogePhotoUri}}" />
+					<div style="font-size: smaller; padding-bottom: 1em;"> by <b>{{ u.userName }} </b> on {{ u.uploadDate }}.</div>
+				</div>
+
+			</div>
+		</div>
+
+		<script src="doge.js"></script>
+		<script src="lib/requirejs/require.js" data-main="monitorApp.js"></script>
+	</body>
+</html>

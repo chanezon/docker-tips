@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.3.0.M2</version>
+	</parent>
+	<groupId>io.spring.doge</groupId>
+	<artifactId>spring-doge-parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+	<modules>
+		<module>spring-doge</module>
+		<module>spring-doge-photo</module>
+		<module>spring-doge-web</module>
+	</modules>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<configuration>
+					<useProjectReferences>false</useProjectReferences>
+					<additionalConfig>
+						<file>
+							<name>.settings/org.eclipse.jdt.ui.prefs</name>
+							<location>${main.basedir}/eclipse/org.eclipse.jdt.ui.prefs</location>
+						</file>
+						<file>
+							<name>.settings/org.eclipse.jdt.core.prefs</name>
+							<location>${main.basedir}/eclipse/org.eclipse.jdt.core.prefs</location>
+						</file>
+					</additionalConfig>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<repositories>
+		<repository>
+			<id>spring-milestone</id>
+			<url>http://repo.springsource.org/milestone</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>spring-milestone</id>
+			<url>http://repo.springsource.org/milestone</url>
+		</pluginRepository>
+	</pluginRepositories>
+</project>

@@ -1,0 +1,18 @@
+---
+applications:
+- name: doge
+  memory: 512M
+  instances: 1
+  host: doge-${random-word}
+  domain: cfapps.io
+  path: spring-doge/target/spring-doge.jar
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  services:
+    - doge-mongo
+  env:
+    SPRING_PROFILES_DEFAULT: cloud
+    DEBUG: "true"
+    debug: "true"
+
+
+  

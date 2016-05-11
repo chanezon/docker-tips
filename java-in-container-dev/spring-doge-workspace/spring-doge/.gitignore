@@ -1,0 +1,6 @@
+*iml
+.idea
+.gitignore~
+target
+bin
+.DS_Store

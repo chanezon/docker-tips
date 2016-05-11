@@ -1,0 +1,10 @@
+mongo:
+  image: mongo
+
+web:
+  image: ${docker.image.prefix}/${project.artifactId}
+  ports:
+   - "8080:8080"
+  links: ["mongo"]
+  environment:
+   - MONGODB_URI=mongodb://mongo:27017/test

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Spring Doge: Such Boot!</title>
+	<meta name="description" content="A simple application demonstrating how to use Spring Boot for evil." />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" href="css/doge.css" />
+</head>
+<body>
+
+	<!--[if lt IE 7]>
+	<p>
+	    You are using an <strong>outdated</strong> browser.
+	    Please upgrade your browser to improve your experience.
+	</p>
+	<![endif]-->
+
+	<div ng-controller="ClientController" class="ng-cloak">
+
+		<h1>Upload an Image and have fun!</h1>
+
+		<div>
+			Open the <a target="doge-monitor" href="/monitor">monitor page
+			to see all the uploads as they happen!</a>
+		</div>
+
+		<P>
+			Welcome, <select ng-model="selectedUser"
+				ng-options="u.name for u in users | orderBy: 'name'"
+				ng-init="selectedUser.id=user.id" ng-required="true">
+			</select>.
+		</P>
+
+		<div ng-show="dropSupported" class="drop-box"
+			ng-file-drop="onFileSelect($files);"
+			ng-file-drop-available="dropSupported=true">Drop files to "Dogeify" here</div>
+
+		<div ng-show="!dropSupported">HTML5 Drop File is not supported on this browser</div>
+
+		<ul id="uploads">
+			<li ng-repeat="dogeUpload in dogeUploads"><a
+				href="{{dogeUpload}}"><img src="{{dogeUpload}}" />{{dogeUpload}}</a>
+			</li>
+		</ul>
+
+	</div>
+
+	<script src="doge.js"></script>
+	<script src="lib/requirejs/require.js" data-main="clientApp.js"></script>
+
+</body>
+</html>

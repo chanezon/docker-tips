@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.springframework.ide.eclipse.boot.launch">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/spring-doge/src/main/java/doge/Application.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
+<listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="doge.Application"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="spring-doge"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.springframework.ide.eclipse.boot.launch.BootMavenSourcePathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Djava.security.egd=file:/dev/./urandom &#10;-Dspring.data.mongodb.uri=mongodb://mongo:27017/test"/>
+<stringAttribute key="process_factory_id" value="org.springframework.ide.eclipse.boot.launch.process.BootProcessFactory"/>
+<booleanAttribute key="spring.boot.ansi.console" value="true"/>
+<booleanAttribute key="spring.boot.dash.hidden" value="false"/>
+<booleanAttribute key="spring.boot.debug.enable" value="true"/>
+<booleanAttribute key="spring.boot.lifecycle.enable" value="true"/>
+<stringAttribute key="spring.boot.lifecycle.termination.timeout" value="15000"/>
+<booleanAttribute key="spring.boot.livebean.enable" value="true"/>
+<stringAttribute key="spring.boot.livebean.port" value="0"/>
+<stringAttribute key="spring.boot.profile" value=""/>
+</launchConfiguration>
