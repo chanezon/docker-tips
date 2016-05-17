@@ -1,46 +1,57 @@
 # Spring Doge - Such Boot!
 
+This is a forked version of @joshlong & @philwebb's [spring-doge](https://github.com/joshlong/spring-doge) microservice demo application. I haven't changed the code, but focus on how to develop and deploy it with Docker.
+
+
+## Development in a container with Spring Tool Suite
+
+In order to 
 ```
-cf push -p target/demo-0.0.1-SNAPSHOT.jar  -b  https://github.com/cloudfoundry/java-buildpack.git  doge
-
-http://www.java-allandsundry.com/2014/08/deploying-spring-boot-application-to.html
-```
-
-Interesting introduction [to deploying Spring Boot applications using Spring Cloud](http://www.java-allandsundry.com/2014/08/deploying-spring-boot-application-to.html)
-https://gist.github.com/relaxdiego/7539911
-
-https://github.com/pivotal-cf/java-8-buildpack/blob/master/docs/example-java_main.md
-
-## Building and running the application using docker and docker-compose
-
-The maven build for this project integrates with Docker using the [Spotify Maven plugin](https://github.com/spotify/docker-maven-plugin). You need to have Docker installed and configured. See [Installing Docker](https://docs.docker.com/installation/).
-
-In order to build a docker image:  
-```
-mvn package
+git clone https://github.com/chanezon/docker-tips.git
+cd java-in-container-dev/spring-doge-workspace/spring-doge
+startx
 ```
 
-You can customize the Docker Hub user for your image (by default it will create chanezon/spring-doge) in spring-doge/pom.xml.
-
-Then to run the app:  
-```
-docker-compose -f spring-doge/target/docker-compose.yml up
-```
-
-## Old Building and running with Docker
-
-You can use STS or a locally installation of maven to build spring-doge. However, if you need to build that on a new machine where you don't have all your development environment setup, you can build it with the maven Docker container.
+Check out [Running X11 applications in Docker for Mac](https://github.com/chanezon/docker-tips/tree/master/x11) for the startx script.
 
 ```
-docker run -v ~/.m2:/root/.m2 -v "$PWD":/usr/src -w /usr/src maven:3-jdk-8 mvn install
-```
-
-This will create the spring-doge jar file in target.
-Then, you can build a container for the app and run the app and a Mongodb database in containers with the following commands:
-
-```
-docker build -t foo/spring-doge .
 docker-compose up
 ```
 
-Change chanezon to your docker hub username (change it also in the docker-compose.yml file) if you want to push a modification to this image to your repository in Docker hub.
+Will launch Eclipse and Mongodb. You can start running and debugging your app right away, check the result in your browser at localhost:8080.
+
+## Building the image
+
+Either build the jar file with one container and copy it in the final image, or use the all-in-one Dockerfile to build the image. The all-in-one build is slow since it cannot reuse a maven volume. I typically use it only for CI/CD, and use the maven container for day to day builds.
+
+```
+docker run -it --rm -v $PWD:/usr/src/spring-doge -v maven:/root/.m2 -w /usr/src/spring-doge maven:3.3-jdk-8 mvn package
+docker build -t chanezon/spring-doge -f Dockerfile.dev .
+```
+
+or
+
+```
+docker build -t chanezon/spring-doge .
+```
+
+## Deployment on Swarm or UCP with Interlock
+
+```
+docker-compose -f docker-compose.prod.yml up -d
+docker-compose -f docker-compose.prod.yml scale web=2
+```
+
+`ehazlett/docker-demo` is a great container to test Interlock, since it shows the id of teh cointainer that is deployed.
+```
+docker run -d -P \
+--label interlock.hostname=test1 \
+--label interlock.domain=chanezon.com \
+ehazlett/docker-demo
+```
+
+Then setup your dns to the IP address where the load balancer is exposed.
+```
+spring-doge 10800 IN CNAME patagt20.westus.cloudapp.azure.com.
+```
+
