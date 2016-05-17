@@ -20,6 +20,8 @@ docker-compose up
 
 Will launch Eclipse and Mongodb. You can start running and debugging your app right away, check the result in your browser at localhost:8080.
 
+<img src="/img/sts-compose.png"/>
+
 ## Building the image
 
 Either build the jar file with one container and copy it in the final image, or use the all-in-one Dockerfile to build the image. The all-in-one build is slow since it cannot reuse a maven volume. I typically use it only for CI/CD, and use the maven container for day to day builds.
