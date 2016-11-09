@@ -7,7 +7,7 @@
 Docker is used a lot to build, ship and run server-side microservices. But one of the undervalued benefits of containerization is that it allows you to containerize the development process as well. Application development involves a lot of yak-shaving: install a runtime, an IDE, a database, configure it all, repeat and rinse for each app and all their versions, using different versions of runtimes eventually (rvm for Ruby, nvm for Node, VirtualEnv for Python, ...). This post is about how to containerize your development workflow, including using graphical apps such as IDEs, editors, Image and vector graphics editors or scientific programs. Developers on Linux were able to do that since [Jessie Frazelle's series of blog posts](https://blog.jessfraz.com/post/docker-containers-on-the-desktop/) and [talks](https://www.youtube.com/watch?v=GsLZz8cZCzc), mounting the X11 socket inside the container: this post is about how to leverage these tools from Docker for Mac.
 
 Docker for Mac lets you run any Linux executable in an isolated process on Mac. A graphical app is just another process, that needs access to the X11 socket of the system, or an X11 server. You can run X11 applications on a Mac using an open source project called [Xquartz](http://www.xquartz.org/). The steps to expose XQuartz to a Linux process running in Docker are simple:
-1. install XQuartz from [xquartz.org](http://www.xquartz.org/)
+1. install XQuartz from [xquartz.org](http://www.xquartz.org/). Note: you need to install [XQuartz version 2.7.10](https://www.xquartz.org/releases/XQuartz-2.7.10.html), version 2.7.11 does not work with Docker for Mac.
 Then you have 3 choices:
 1. Proxy the XQuartz socket to port 6000
 or
