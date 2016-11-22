@@ -1,12 +1,8 @@
 #!/bin/bash
 
-SWARM_IMAGE=swarm:1.1.0-rc1
-BOOT2DOCKER_IMAGE="https://github.com/tianon/boot2docker-legacy/releases/download/v1.10.0-rc1/boot2docker.iso"
-
 # Docker Machine Setup
 docker-machine create \
 	-d virtualbox \
-    --virtualbox-boot2docker-url $BOOT2DOCKER_IMAGE \
 	swl-consul
 
 docker $(docker-machine config swl-consul) run -d --restart=always \
@@ -16,9 +12,7 @@ docker $(docker-machine config swl-consul) run -d --restart=always \
 	
 docker-machine create \
 	-d virtualbox \
-    --virtualbox-boot2docker-url $BOOT2DOCKER_IMAGE \
 	--swarm \
-	--swarm-image="$SWARM_IMAGE" \
 	--swarm-master \
 	--swarm-discovery="consul://$(docker-machine ip swl-consul):8500" \
 	--engine-opt="cluster-store=consul://$(docker-machine ip swl-consul):8500" \
@@ -27,9 +21,7 @@ docker-machine create \
 
 docker-machine create \
 	-d virtualbox \
-    --virtualbox-boot2docker-url $BOOT2DOCKER_IMAGE \
 	--swarm \
-	--swarm-image="$SWARM_IMAGE" \
 	--swarm-discovery="consul://$(docker-machine ip swl-consul):8500" \
 	--engine-opt="cluster-store=consul://$(docker-machine ip swl-consul):8500" \
     --engine-opt="cluster-advertise=eth1:0" \
