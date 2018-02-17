@@ -1,12 +1,21 @@
-web:
-  image: chanezon/spring-doge
-  ports:
-   - 8080
-  links: ["mongo"]
-  environment:
-   - MONGODB_URI=mongodb://mongo:27017/test
-  labels:
-   - "interlock.hostname=spring-doge"
-   - "interlock.domain=chanezon.com"
-mongo:
-  image: mongo
+version: '3.3'
+services:
+  web:
+    image: chanezon/spring-doge
+    ports:      
+      - mode: ingress
+        published: 8080
+        target: 8080
+    deploy:
+      placement:
+        constraints:
+        - node.platform.os == linux
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/test
+  mongo:
+    image: mongo
+    deploy:
+      placement:
+        constraints:
+        - node.platform.os == linux
+    
